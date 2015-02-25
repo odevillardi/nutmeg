@@ -1,0 +1,10 @@
+<div class="row">
+	<div class="six columns">
+		<h1>{{ include.title }}</h1>
+		<p>{{ include.description }}</p>
+		<a class="button massive" href="{% post_url 2015-02-25-test %}">{{ include.linkTitle }}</a>
+	</div>
+	<div class="six columns">
+		<img class="u-max-full-width" src="{{ include.imageUrl }}" alt="{{ include.imageAlt }}">
+	</div>
+</div>
