@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Play • Nutmeg</title>
+    <meta name="description" content="">
+    <meta name="author" content="Olivier de Villardi">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Rammetto+One' rel='stylesheet' type='text/css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/nutmeg.css">
+
+    <link rel="icon" type="image/png" href="/images/favico.png">
+  </head>
+
+  <body>
+    <header>
+      <div class="header">
+        <a href="/"><img src="/images/nutmeg-carre.svg" alt="NUTMEG"></a>
+      </div>
+      <div class="play">
+        <a class="button" href="/play/">Play</a>
+      </div>
+    </header>
+
+    <div class="container section">
+      <h1>Play</h1>
+    </div>
+    <div class="board container row">
+      <div class="three columns pedal on nutmeg">
+        <a class="button" href="#">-</a>
+        <h5>Nutmeg's stinky drive</h5>
+        <table class="u-full-width">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td>Drive</td>
+              <td><input type="range" min="0" max="10" step="0.1" value="7" oninput="crossfade( event.target.value );"></td>
+            </tr>
+            <tr>
+              <td>Tone</td>
+              <td><input type="range" min="0" max="10" step="0.1" value="5" oninput="crossfade( event.target.value );"></td>
+            </tr>
+            <tr>
+              <td>Stink</td>
+              <td><input type="range" min="0" max="10" step="0.1" value="5" oninput="crossfade( event.target.value );"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="u-full-width footswitches">
+          <thead>
+            <tr>
+              <th>on / <span class="active">off</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="button button-primary" href="#">A</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="six columns pedal on clover">
+        <a class="button" href="#">-</a>
+        <h5>Clover's infinite echo</h5>
+        <table class="u-full-width">
+          <thead></thead>
+          <tbody>
+            <tr>
+              <td>Delay</td>
+              <td><input type="range" min="0.0" max="1.0" step="0.01" value="1.0" oninput="crossfade( event.target.value );"></td>
+            </tr>
+            <tr>
+              <td><abbr title="Modulation">Mod</abbr></td>
+              <td><input type="range" min="0.0" max="1.0" step="0.01" value="1.0" oninput="crossfade( event.target.value );"></td>
+            </tr>
+            <tr>
+              <td><abbr title="Feedback">Fbk</abbr></td>
+              <td><input type="range" min="0.0" max="1.0" step="0.01" value="1.0" oninput="crossfade( event.target.value );"></td>
+            </tr>
+            <tr>
+              <td>Mix</td>
+              <td><input type="range" min="0.0" max="1.0" step="0.01" value="1.0" oninput="crossfade( event.target.value );"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="u-full-width footswitches">
+          <thead>
+            <tr>
+              <th>on / <span class="active">off</span></th>
+              <th>tap <span class="active">120 bpm</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="button button-primary" href="#">B</a></td>
+              <td><a class="button button-primary" href="#">C</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="three columns pedal off">
+        <a class="button" href="/effets/">+</a>
+      </div>
+    </div>
+
+    <div class="container addBoard">
+      <p><a class="button u-full-width" href="/">+ 4 pédales</a></p>
+      
+    </div>
+
+
+    <footer>
+      <div class="footer">
+        <ul>
+          <li><a href="#">À propos</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">CGV</a></li>
+        </ul>
+      </div>
+      <div class="thanks">
+        <ul>
+          <li>Thanks</a></li>
+          <li><a href="//jekyllrb.com/">Jekyll</a></li>
+          <li><a href="//github.com">Github</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

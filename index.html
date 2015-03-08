@@ -1,25 +1,25 @@
 ---
-title: "Nutmeg Guitars & effects"
-
-### Massive 1 ###
-1massiveTitle:
-- Nutmeg guitars
-
-1massiveDescription:
-- "Fabriquées à la main à partir de matériaux recyclés, assemblées en France."
-
-1massiveImageUrl:
-- images/guitars.JPG
-
-1massiveLinkTitle:
-- En savoir plus sur nos guitares
-
-1massiveLinkUrl:
-- 
-
+title: "Nutmeg • Guitares, effets et pédales"
 ---
-{% include header.html param=page.title %}
-<div class="container">
-{% include bazinga.html title=page.1massiveTitle description=page.1massiveDescription linkTitle=page.1massiveLinkTitle imageUrl=page.1massiveImageUrl destinationUrl=page.1massiveLinkUrl %}
-</div>
+
+{% include header.html title=page.title %}
+
+    <div class="bazinga guitars first-bazinga">
+      <div class="container">
+        {% include bazinga.html title=site.data.guitars.Titre image=site.data.guitars.Image description=site.data.guitars.Description linkTitle=site.data.guitars.LinkTitle linkUrl=site.data.guitars.LinkUrl offset="" titleLevel="1" buttonPrimary="-primary" %}
+      </div>
+    </div>
+
+    <div class="bazinga effects">
+      <div class="container">
+        {% include bazinga.html title=site.data.effects.Titre image=site.data.effects.Image description=site.data.effects.Description linkTitle=site.data.effects.LinkTitle linkUrl=site.data.effects.LinkUrl offset="six" titleLevel="1" buttonPrimary="-primary" %}
+      </div>
+    </div>
+
+    <div class="bazinga pedals last-bazinga">
+      <div class="container">
+        {% include bazinga.html title=site.data.pedals.Titre image=site.data.pedals.Image description=site.data.pedals.Description linkTitle=site.data.pedals.LinkTitle linkUrl=site.data.pedals.LinkUrl offset="" titleLevel="1" buttonPrimary="-primary" %}
+      </div>
+    </div>
+
 {% include footer.html %}

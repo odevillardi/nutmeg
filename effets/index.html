@@ -1,0 +1,35 @@
+---
+title: "Effets • Nutmeg"
+---
+
+{% include header.html title=page.title %}
+
+    <div class="container section">
+      <h1>{{ site.data.effects.Titre }}</h1>
+      <p>
+        {{ site.data.effects.Description }}
+        <br>
+        {{ site.data.effects.AddDescription }}
+      </p>
+      {% for serie in site.data.effects.effects %}
+        {% include section-product.html title=serie.Title image=serie.Image description=serie.Description buyTitle=serie.BuyTitle buyUrl=serie.BuyUrl infoTitle=serie.InfoTitle infoUrl=serie.InfoUrl offset=serie.Offset price=serie.Price %}
+      {% endfor %}
+    </div>
+
+    <div class="discover">
+      <div class="container">
+        <h4>Découvrez aussi nos guitares et pédales</h4>
+      </div>
+    </div>
+
+    <div class="bazinga guitars last-bazinga">
+      <div class="container">
+        <div class="row">
+          {% include bazinga.html title=site.data.guitars.Titre image=site.data.guitars.Image description=site.data.guitars.Description linkTitle=site.data.guitars.LinkTitle linkUrl=site.data.guitars.LinkUrl offset="" titleLevel="3" %}
+          
+          {% include bazinga.html title=site.data.pedals.Titre image=site.data.pedals.Image description=site.data.pedals.Description linkTitle=site.data.pedals.LinkTitle linkUrl=site.data.pedals.LinkUrl offset="" titleLevel="3" %}
+        </div>
+      </div>
+    </div>
+
+{% include footer.html %}

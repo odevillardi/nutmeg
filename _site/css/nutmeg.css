@@ -1,39 +1,357 @@
 /* Nutmeg CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 html {
-	font-size: 0.8rem;
+  background-color: #1E1E1E;
 }
 
-header {
-	background-color: #1A2526 ;
-	height: 10em;
-	text-align: center;
+body {
+  color: #E1E1E1;
+  font-family: 'PT mono', monospace;
+  font-size: 2em;
 }
 
-header img {
-	height: 10em;
+@media (min-width: 750px) {
+  body { font-size: 2.4em; }
 }
 
-footer {
-	background-color: #1A2526 ;
-	color: #fff;
-	text-align: center;
-}
-
-/* Media Queries
+/* Hx
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1, h3, h5 {
+  font-family: 'Rammetto One', cursive;
+  font-variant: small-caps;
+}
 
-/* Larger than mobile */
-@media (min-width: 400px) {}
+h2, h4, h6 { font-weight: bold; }
 
-/* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a { color: #51E5A5; }
+a:hover {
+  color: #36996E;
+  text-decoration: none;
+}
 
-/* Larger than tablet */
-@media (min-width: 750px) {}
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button-primary:before              { content: "› "; }
+.button-primary:hover::before { content: "» "; }
 
-/* Larger than desktop */
-@media (min-width: 1000px) {}
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  height: 4rem;
+  padding: 0 2rem;
+  color: #bbb;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 3.8rem;
+  text-transform: none;
+  font-variant: small-caps;
+  border-radius: 0;
+}
 
-/* Larger than Desktop HD */
-@media (min-width: 1200px) {}
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+  color: #888;
+}
+
+@media (min-width: 750px) {
+  .button,
+  button,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    height: 5rem;
+    font-size: 1.8rem;
+    line-height: 5rem;
+  }
+}
+
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+  color: #FFF;
+  background-color: #246649;
+  border-color: #246649;
+}
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  color: #FFF;
+  background-color: #36996E;
+  border-color: #36996E; }
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header {
+  text-align: left;
+  float: left;
+  margin-left: 20px;
+}
+
+.header img {
+  margin-top: 2rem;
+  height: 8rem;
+}
+
+.play {
+  text-align: right;
+  padding: 4.5rem 0 2.5rem 0;
+  margin-right: 20px;
+}
+
+.play .button:hover {
+  color: #1E1E1E; 
+  background-color: #E1E1E1;
+}
+
+@media (min-width: 400px) {
+  .header { margin-left:  7.5%; }
+  .play   { margin-right: 7.5%;   }
+}
+
+@media (min-width: 750px) {
+  .header { margin-left:  10%; }
+  .play   { margin-right: 10%; padding: 3.5rem 0 2.5rem 0; }
+}
+
+@media (min-width: 1000px) {
+  .header,
+  .play {
+    width: calc(50% - 480px);
+    min-width: 10%;
+    background-color: rgba(30, 30, 30, 0.8);
+    text-align: center;
+  }
+
+  .header {
+    margin-left: 0;
+    height: 14rem;
+  }
+
+  .header img { margin: 3rem 0; }
+
+  .play { 
+    float: right;
+    margin-right: 0;
+    padding: 4.5rem 0 3.5rem 0;
+  }
+}
+
+/* Bazinga
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.bazinga {
+  background: no-repeat center;
+  background-size: cover;
+  padding: 7rem 0;
+  color: #1E1E1E;
+}
+
+.bazinga a,
+.bazinga .button:not(.button-primary) {
+  color: inherit; 
+}
+
+.bazinga *:not(div):not(abbr):not(a) {
+  background-color: rgba(235, 235, 235, 0.8);
+  display: inline-block;
+  padding: 0 2rem;
+}
+
+.guitars { background-image: url("../images/guitars/nutmeg-guitars-1080.JPG"); }
+.effects { background-image: url("../images/effects/nutmeg-effects-1080.JPG"); }
+.pedals  { background-image: url("../images/pedals/nutmeg-pedals-1080.JPG"); }
+
+.bazinga .column:last-child:not(:only-child),
+.bazinga .columns:last-child:not(:only-child) {
+  margin-top: 7rem;
+}
+
+@media (min-width: 750px) {
+  .bazinga .column:last-child:not(:only-child),
+  .bazinga .columns:last-child:not(:only-child) {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .bazinga {
+    padding: 7rem 0;
+    margin-bottom: 0;
+  }
+
+  .first-bazinga { padding: 14rem 0 7rem 0; }
+  .last-bazinga { padding: 7rem 0 14rem 0; }
+}
+
+/* Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (min-width: 750px) {
+  .section .price { text-align: center;   }
+  .section .button-primary {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 1000px) {
+  .section {
+    border-top: none;
+    padding-top: 0;
+  }
+  .section h1 { padding-top: 4rem; }
+}
+
+.section .row { margin-bottom: 6rem; }
+
+.section a { color: inherit; }
+
+.discover {
+  background-color: rgba(235, 235, 235, 0.8);
+  color: #1E1E1E;
+  padding-top: 2rem;
+}
+
+/* Board
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.board .button-primary {
+  border-radius: 50%;
+}
+
+.board .button:before {
+  content: none;
+}
+
+.pedal {
+  border: 1px solid #E1E1E1;
+  padding: 1rem;
+}
+
+.pedal.off {
+  border-style: dashed ;
+}
+
+.addBoard, .pedal {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.pedal input[type=range] {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.footswitches th,
+.footswitches td {
+  color: rgba(235, 235, 235, 0.5);
+  font-weight: normal;
+  font-size: 1.8rem;
+  text-align: center;
+  border: none;
+}
+
+.footswitches .active {
+  color: rgba(235, 235, 235, 1);
+}
+
+@media (min-width: 750px) {
+  .board {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .pedal {
+    margin-top: 0;
+    min-height: 40rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .addBoard {
+    height: 20rem;
+  }
+}
+
+/* Pedals
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.nutmeg  { border-color: #51E5A5; }
+.nutmeg   h5    { color: #51E5A5; }
+
+.clover  { border-color: darkred; }
+.clover   h5    { color: darkred; }
+
+.oliver  { border-color: darkorange; }
+.oliver   h5    { color: darkorange; }
+
+.zelda   { border-color: slategray; }
+.zelda    h5 {    color: slategray; }
+
+.tara    { border-color: #E1E1E1; }
+.tara     h5 {    color: #E1E1E1; }
+
+.piggely { border-color: deeppink; }
+.piggely  h5 {    color: deeppink; }
+
+.wiggely { border-color: dodgerblue; }
+.wiggely  h5 {    color: dodgerblue; }
+
+.pigasus { border-color: rebeccapurple; }
+.pigasus  h5 {    color: rebeccapurple; }
+
+.shaolin { border-color: yellow; }
+.shaolin  h5 {    color: yellow; }
+
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+footer {
+  padding-top: 2rem;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+footer li { display: inline; }
+footer li:not(:first-child):before { content: "• "; }
+
+@media (min-width: 1000px) {
+  footer { padding-top: 0; }
+
+  footer li { display: block; }
+  footer li:not(:first-child):before {
+    content: none;
+  }
+
+  .footer,
+  .thanks {
+    height: 9rem;
+    width: calc(50% - 480px);
+    min-width: 10%;
+    background-color: rgba(30, 30, 30, 0.8);
+    margin: -15rem 0 0 0;
+    padding: 3rem 0;
+  }
+
+  .thanks {   float: right; }
+}

@@ -1,0 +1,22 @@
+<h2>{{ include.title }}</h2>
+<div class="row">
+  {% if include.image != "" %}
+    <div class="four columns">
+      <img class="u-max-full-width" src="{{ include.image }}" alt="{{ include.title | strip_html }}">
+    </div>
+  {% endif %}
+  <div class="{% if include.image != "" %}four{% else %}eight{% endif %} columns">
+    <p>{{ include.description }}</p>
+    {% if include.infoUrl != "" %}
+      <p><a class="button" href="{{ include.infoUrl }}">{{ include.infoTitle }}</a></p>
+    {% endif %}
+  </div>
+  <div class="four columns">
+    {% if include.linkUrl != "" %}
+      <p class="price">{{ include.price }}</p>
+    {% endif %}
+    {% if include.buyUrl != "" %}
+      <p><a class="button button-primary" href="{{ include.buyUrl }}">{{ include.buyTitle }}</a></p>
+    {% endif %}
+  </div>
+</div>
