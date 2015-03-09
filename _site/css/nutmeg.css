@@ -178,9 +178,9 @@ input[type="button"].button-primary:focus {
   padding: 0 2rem;
 }
 
-.guitars { background-image: url("../images/guitars/nutmeg-guitars-1080.JPG"); }
-.effects { background-image: url("../images/effects/nutmeg-effects-1080.JPG"); }
-.pedals  { background-image: url("../images/pedals/nutmeg-pedals-1080.JPG"); }
+.guitars { background-image: url("../images/guitars/nutmeg-guitars-1080.jpg"); }
+.effects { background-image: url("../images/effects/nutmeg-effects-1080.jpg"); }
+.pedals  { background-image: url("../images/pedals/nutmeg-pedals-1080.jpg"); }
 
 .bazinga .column:last-child:not(:only-child),
 .bazinga .columns:last-child:not(:only-child) {
