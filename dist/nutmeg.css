@@ -127,7 +127,7 @@ input[type="button"].button-primary:focus {
 
 @media (min-width: 400px) {
   .header { margin-left:  7.5%; }
-  .play   { margin-right: 7.5%;   }
+  .play   { margin-right: 7.5%; }
 }
 
 @media (min-width: 750px) {
@@ -207,7 +207,7 @@ input[type="button"].button-primary:focus {
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media (min-width: 750px) {
-  .section .price { text-align: center;   }
+  .section .price { text-align: center; }
   .section .button-primary {
     width: 100%;
     box-sizing: border-box;
@@ -248,7 +248,7 @@ input[type="button"].button-primary:focus {
 }
 
 .pedal.off {
-  border-style: dashed ;
+  border-style: dashed;
 }
 
 .addBoard, .pedal {
@@ -353,5 +353,5 @@ footer li:not(:first-child):before { content: "• "; }
     padding: 3rem 0;
   }
 
-  .thanks {   float: right; }
+  .thanks { float: right; }
 }

@@ -8,7 +8,7 @@ title: "Play • Nutmeg"
       <h1>Play</h1>
     </div>
     <div class="board container row">
-      <div class="three columns pedal on nutmeg">
+      <div class="six columns pedal on nutmeg">
         <a class="button" href="#">-</a>
         <h5>Nutmeg's stinky drive</h5>
         <table class="u-full-width">
@@ -16,7 +16,7 @@ title: "Play • Nutmeg"
           <tbody>
             <tr>
               <td>Drive</td>
-              <td><input type="range" min="0" max="10" step="0.1" value="7" oninput="crossfade( event.target.value );"></td>
+              <td><input class="knob" data-angleOffset=-125 data-angleArc=250 data-fgColor="#66EE66" data-rotation="clockwise" value="35"></td>
             </tr>
             <tr>
               <td>Tone</td>
@@ -80,9 +80,9 @@ title: "Play • Nutmeg"
           </tbody>
         </table>
       </div>
-      <div class="three columns pedal off">
+<!--       <div class="three columns pedal off">
         <a class="button" href="/effets/">+</a>
-      </div>
+      </div> -->
     </div>
 
     <div class="container addBoard">
