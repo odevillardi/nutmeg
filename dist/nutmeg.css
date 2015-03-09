@@ -262,8 +262,7 @@ input[type="button"].button-primary:focus {
   padding: 0;
 }
 
-.footswitches th,
-.footswitches td {
+.footswitches {
   color: rgba(235, 235, 235, 0.5);
   font-weight: normal;
   font-size: 1.8rem;
@@ -271,9 +270,7 @@ input[type="button"].button-primary:focus {
   border: none;
 }
 
-.footswitches .active {
-  color: rgba(235, 235, 235, 1);
-}
+.footswitches .active { color: rgba(235, 235, 235, 1); }
 
 @media (min-width: 750px) {
   .board {
