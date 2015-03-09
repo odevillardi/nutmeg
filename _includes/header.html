@@ -7,13 +7,17 @@
     <meta name="author" content="Olivier de Villardi">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="apple-mobile-web-app-title" content="{{ include.title }}">
-    <link rel="apple-touch-icon" href="{{ site.baseurl }}/images/touch-nutmeg.png"/>
-    <link rel="apple-touch-startup-image" href="{{ site.baseurl }}/images/touch-nutmeg.png" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    <link href="//fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon"             href="{{ site.baseurl }}/images/favico.png" />
+    <link rel="icon"                      href="{{ site.baseurl }}/images/touch-nutmeg.png">
+    <link rel="apple-touch-icon"          href="{{ site.baseurl }}/images/touch-nutmeg.png"/>
+    <link rel="apple-touch-startup-image" href="{{ site.baseurl }}/images/touch-nutmeg.png" />
+
+    <meta name="apple-mobile-web-app-title"   content="{{ include.title }}">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable"       content="yes">
+
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Rammetto+One" type="text/css">
     <link rel="stylesheet" href="{{ site.baseurl }}/dist/normalize.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/dist/skeleton.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/dist/nutmeg.css">
@@ -104,8 +108,6 @@
         });
       </script>
     {% endif %}
-
-    <link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favico.png">
   </head>
 
   <body>
