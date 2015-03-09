@@ -243,12 +243,16 @@ input[type="button"].button-primary:focus {
 }
 
 .pedal {
-  border: 1px solid #E1E1E1;
+  border: 3px solid #E1E1E1;
+  border-radius: 4px;
   padding: 1rem;
+  font-size: 1.8rem;
 }
 
 .pedal.off {
   border-style: dashed;
+  border-width: 1px;
+  border-radius: 0;
 }
 
 .addBoard, .pedal {
@@ -265,7 +269,6 @@ input[type="button"].button-primary:focus {
 .footswitches {
   color: rgba(235, 235, 235, 0.5);
   font-weight: normal;
-  font-size: 1.8rem;
   text-align: center;
   border: none;
 }
