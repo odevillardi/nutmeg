@@ -179,7 +179,7 @@ input[type="button"].button-primary:focus {
 }
 
 .guitars { background-image: url("../images/guitars/nutmeg-guitars-1080.jpg"); }
-.effects { background-image: url("../images/effects/nutmeg-effects-1080.jpg"); }
+.fx { background-image: url("../images/fx/nutmeg-fx-1080.jpg"); }
 .pedals  { background-image: url("../images/pedals/nutmeg-pedals-1080.jpg"); }
 
 .bazinga .column:last-child:not(:only-child),
