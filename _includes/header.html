@@ -114,6 +114,10 @@
         <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/nutmeg-carre.svg" alt="NUTMEG"></a>
       </div>
       <div class="play">
-        <a class="button" href="{{ site.baseurl }}/play/">Play</a>
+        {% if include.save %}
+          <a class="button" href="#">Save</a>
+        {% else %}
+          <a class="button" href="{{ site.baseurl }}/fx/">Fx</a>
+        {% endif %}
       </div>
     </header>

@@ -1,105 +1,51 @@
-### Effets ###
-Titre:          "Effets"
+### Fx ###
+Titre:          "Fx"
 Description:    "Personnalisables, <abbr title='Haute technologie'>High-Tech</abbr>, open-source."
 AddDescription: "Fabriqués sur les Internets."
 LinkTitle:      "Voir nos effets"
-LinkUrl:        "/effets/"
+LinkUrl:        "/fx/"
 
 ### Effects ###
 effects:
 ### Nutmeg's stinky drive ###
 - class:        "nutmeg"
   Title:        "Nutmeg's stinky drive"
-  Image:        ""
-  Description:  ""
-  InfoTitle:    "Plus d'infos"
-  InfoUrl:      "#"
-  BuyTitle:     "Utiliser"
-  BuyUrl:       "#"
 
 ### Clover's infinite echo ###
 - class:        "clover"
   Title:        "Clover's infinite echo"
-  Image:        ""
-  Description:  ""
-  InfoTitle:    "Plus d'infos"
-  InfoUrl:      "#"
-  BuyTitle:     "Utiliser"
-  BuyUrl:       "#"
 
 
 ### Oliver's holly reverb ###
 - class:        "oliver"
   Title:        "Oliver's holly reverb"
-  Image:        ""
-  Description:  ""
-  InfoTitle:    "Plus d'infos"
-  InfoUrl:      "#"
-  BuyTitle:     "Utiliser"
-  BuyUrl:       "#"
 
 
 ### Zelda's auto wha ###
 - class:        "zelda"
   Title:        "Zelda's fun auto-wah"
-  Image:        ""
-  Description:  ""
-  InfoTitle:    "Plus d'infos"
-  InfoUrl:      "#"
-  BuyTitle:     "Utiliser"
-  BuyUrl:       "#"
 
 ### Tammy's compressor ###
 - class:        "tara"
   Title:        "Tara's sweet compres&shy;sor"
-  Image:        ""
-  Description:  ""
-  InfoTitle:    "Plus d'infos"
-  InfoUrl:      "#"
-  BuyTitle:     "Utiliser"
-  BuyUrl:       "#"
 
 
 ### Piggely's screaming octaver ###
 - class:        "piggely"
   Title:        "Piggely's screaming octaver"
-  Image:        ""
-  Description:  ""
-  InfoTitle:    "Plus d'infos"
-  InfoUrl:      "#"
-  BuyTitle:     "Utiliser"
-  BuyUrl:       "#"
 
 
 ### Wiggely's dirty wha-bass ###
 - class:        "wiggely"
   Title:        "Wiggely's dirty wah-bass"
-  Image:        ""
-  Description:  ""
-  InfoTitle:    "Plus d'infos"
-  InfoUrl:      "#"
-  BuyTitle:     "Utiliser"
-  BuyUrl:       "#"
 
 
 ### Pigasus' extreme boost ###
 - class:        "pigasus"
   Title:        "Pigasus' extreme boost"
-  Image:        ""
-  Description:  ""
-  InfoTitle:    "Plus d'infos"
-  InfoUrl:      "#"
-  BuyTitle:     "Utiliser"
-  BuyUrl:       "#"
 
 
 ### Shaolin's warm chorus ###
 - class:        "shaolin"
   Title:        "Shaolin's warm chorus"
-  Image:        ""
-  Description:  ""
-  InfoTitle:    "Plus d'infos"
-  InfoUrl:      "#"
-  BuyTitle:     "Utiliser"
-  BuyUrl:       "#"
 

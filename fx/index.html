@@ -1,0 +1,34 @@
+---
+title: "FX • Nutmeg"
+---
+
+{% include header.html title=page.title js=true save=true %}
+
+    <div class="container section">
+      <h1>Fx</h1>
+    </div>
+
+    <div class="board container">
+      <div class="row">
+        {% include effects/nutmeg.html %}
+        {% include effects/clover.html %}
+        {% include effects/oliver.html %}
+      </div>
+      <div class="row">
+        {% include effects/zelda.html %}
+        {% include effects/tara.html %}
+        {% include effects/piggely.html %}
+      </div>
+      <div class="row">
+        {% include effects/wiggely.html %}
+        {% include effects/pigasus.html %}
+        {% include effects/shaolin.html %}
+      </div>
+    </div>
+
+    <div class="container addBoard">
+      <p><a class="button u-full-width" href="/">+ 4 pédales</a></p>
+    </div>
+
+
+{% include footer.html %}
