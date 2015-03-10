@@ -1,12 +1,41 @@
+---
+---
+/* Variables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+$light-gray: #E1E1E1;
+$light-gray-alpha: rgba(235, 235, 235, 0.8);
+
+$dark-gray: #1E1E1E;
+$dark-gray-alpha: rgba(30, 30, 30, 0.8);
+
+$very-dark-gray: #141414;
+
+$light-green: #51E5A5;
+$dark-green: #36996E;
+$very-dark-green: #246649;
+
+$nutmeg-color: #51E5A5;
+$clover-color: darkred;
+$oliver-color: darkorange;
+$zelda-color: slategray;
+$tara-color: $light-gray;
+$piggely-color: deeppink;
+$wiggely-color: dodgerblue;
+$pigasus-color: rebeccapurple;
+$shaolin-color: yellow;
+
+$font-mono: 'PT mono', monospace;
+$font-cursive: 'Rammetto One', cursive;
+
 /* Nutmeg CSS
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 html {
-  background-color: #1E1E1E;
+  background-color: $dark-gray;
 }
 
 body {
-  color: #E1E1E1;
-  font-family: 'PT mono', monospace;
+  color: $light-gray;
+  font-family: $font-mono;
   font-size: 2em;
 }
 
@@ -17,7 +46,7 @@ body {
 /* Hx
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h3, h5 {
-  font-family: 'Rammetto One', cursive;
+  font-family: $font-cursive;
   font-variant: small-caps;
 }
 
@@ -25,15 +54,15 @@ h2, h4, h6 { font-weight: bold; }
 
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-a { color: #51E5A5; }
+a { color: $dark-green; }
 a:hover {
-  color: #36996E;
+  color: $light-green;
   text-decoration: none;
 }
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.button-primary:before              { content: "› "; }
+.button-primary:before        { content: "› "; }
 .button-primary:hover::before { content: "» "; }
 
 .button,
@@ -83,8 +112,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #246649;
-  border-color: #246649;
+  background-color: $very-dark-green;
+  border-color: $very-dark-green;
 }
 
 .button.button-primary:hover,
@@ -98,8 +127,9 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #36996E;
-  border-color: #36996E; }
+  background-color: $dark-green;
+  border-color: $dark-green;
+}
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -121,8 +151,8 @@ input[type="button"].button-primary:focus {
 }
 
 .play .button:hover {
-  color: #1E1E1E; 
-  background-color: #E1E1E1;
+  color: $dark-gray; 
+  background-color: $light-gray;
 }
 
 @media (min-width: 400px) {
@@ -140,7 +170,7 @@ input[type="button"].button-primary:focus {
   .play {
     width: calc(50% - 480px);
     min-width: 10%;
-    background-color: rgba(30, 30, 30, 0.8);
+    background-color: $dark-gray-alpha;
     text-align: center;
   }
 
@@ -164,7 +194,7 @@ input[type="button"].button-primary:focus {
   background: no-repeat center;
   background-size: cover;
   padding: 7rem 0;
-  color: #1E1E1E;
+  color: $dark-gray;
 }
 
 .bazinga a,
@@ -173,14 +203,14 @@ input[type="button"].button-primary:focus {
 }
 
 .bazinga *:not(div):not(abbr):not(a) {
-  background-color: rgba(235, 235, 235, 0.8);
+  background-color: $light-gray-alpha;
   display: inline-block;
   padding: 0 2rem;
 }
 
-.guitars { background-image: url("../images/guitars/nutmeg-guitars-1080.jpg"); }
-.fx { background-image: url("../images/fx/nutmeg-fx-1080.jpg"); }
-.pedals  { background-image: url("../images/pedals/nutmeg-pedals-1080.jpg"); }
+.guitars  { background-image: url("../images/guitars/nutmeg-guitars-1080.jpg"); }
+.fx       { background-image: url("../images/fx/nutmeg-fx-1080.jpg"); }
+.pedals   { background-image: url("../images/pedals/nutmeg-pedals-1080.jpg"); }
 
 .bazinga .column:last-child:not(:only-child),
 .bazinga .columns:last-child:not(:only-child) {
@@ -227,8 +257,8 @@ input[type="button"].button-primary:focus {
 .section a { color: inherit; }
 
 .discover {
-  background-color: rgba(235, 235, 235, 0.8);
-  color: #1E1E1E;
+  background-color: $light-gray-alpha;
+  color: $dark-gray;
   padding-top: 2rem;
 }
 
@@ -238,14 +268,14 @@ input[type="button"].button-primary:focus {
 .board .button:before { content: none; }
 
 .pedal {
-  border: 3px solid #E1E1E1;
+  border: 3px solid $light-gray;
   border-radius: 4px;
   padding: 1rem;
   font-size: 1.8rem;
 }
 
 .pedal.on {
-  background-image: linear-gradient(#1E1E1E, #141414);
+  background-image: linear-gradient($dark-gray, $very-dark-gray);
 }
 
 .pedal.off {
@@ -293,33 +323,24 @@ input[type="button"].button-primary:focus {
 
 /* Pedals
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.nutmeg  { border-color: #51E5A5; }
-.nutmeg   h5    { color: #51E5A5; }
-
-.clover  { border-color: darkred; }
-.clover   h5    { color: darkred; }
-
-.oliver  { border-color: darkorange; }
-.oliver   h5    { color: darkorange; }
-
-.zelda   { border-color: slategray; }
-.zelda    h5 {    color: slategray; }
-
-.tara    { border-color: #E1E1E1; }
-.tara     h5 {    color: #E1E1E1; }
-
-.piggely { border-color: deeppink; }
-.piggely  h5 {    color: deeppink; }
-
-.wiggely { border-color: dodgerblue; }
-.wiggely  h5 {    color: dodgerblue; }
-
-.pigasus { border-color: rebeccapurple; }
-.pigasus  h5 {    color: rebeccapurple; }
-
-.shaolin { border-color: yellow; }
-.shaolin  h5 {    color: yellow; }
-
+.nutmeg  { border-color: $nutmeg-color; }
+.nutmeg   h5    { color: $nutmeg-color; }
+.clover  { border-color: $clover-color; }
+.clover   h5    { color: $clover-color; }
+.oliver  { border-color: $oliver-color; }
+.oliver   h5    { color: $oliver-color; }
+.zelda   { border-color: $zelda-color; }
+.zelda    h5 {    color: $zelda-color; }
+.tara    { border-color: $tara-color; }
+.tara     h5 {    color: $tara-color; }
+.piggely { border-color: $piggely-color; }
+.piggely  h5 {    color: $piggely-color; }
+.wiggely { border-color: $wiggely-color; }
+.wiggely  h5 {    color: $wiggely-color; }
+.pigasus { border-color: $pigasus-color; }
+.pigasus  h5 {    color: $pigasus-color; }
+.shaolin { border-color: $shaolin-color; }
+.shaolin  h5 {    color: $shaolin-color; }
 
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -346,7 +367,7 @@ footer li:not(:first-child):before { content: "• "; }
     height: 9rem;
     width: calc(50% - 480px);
     min-width: 10%;
-    background-color: rgba(30, 30, 30, 0.8);
+    background-color: $dark-gray-alpha;
     margin: -15rem 0 0 0;
     padding: 3rem 0;
   }
