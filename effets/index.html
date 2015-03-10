@@ -11,8 +11,8 @@ title: "Effets • Nutmeg"
         <br>
         {{ site.data.effects.AddDescription }}
       </p>
-      {% for serie in site.data.effects.effects %}
-        {% include section-product.html title=serie.Title image=serie.Image description=serie.Description buyTitle=serie.BuyTitle buyUrl=serie.BuyUrl infoTitle=serie.InfoTitle infoUrl=serie.InfoUrl offset=serie.Offset price=serie.Price %}
+      {% for effect in site.data.effects.effects %}
+        {% include section-product.html title=effect.Title image=effect.Image description=effect.Description buyTitle=effect.BuyTitle buyUrl=effect.BuyUrl infoTitle=effect.InfoTitle infoUrl=effect.InfoUrl offset=effect.Offset price=effect.Price %}
       {% endfor %}
     </div>
 

@@ -8,7 +8,7 @@ LinkUrl:        "/effets/"
 ### Effects ###
 effects:
 ### Nutmeg's stinky drive ###
-- Pedal:        "nutmeg"
+- class:        "nutmeg"
   Title:        "Nutmeg's stinky drive"
   Image:        ""
   Description:  ""
@@ -18,7 +18,7 @@ effects:
   BuyUrl:       "#"
 
 ### Clover's infinite echo ###
-- Pedal:        "clover"
+- class:        "clover"
   Title:        "Clover's infinite echo"
   Image:        ""
   Description:  ""
@@ -29,7 +29,8 @@ effects:
 
 
 ### Oliver's holly reverb ###
-- Title:        "Oliver's holly reverb"
+- class:        "oliver"
+  Title:        "Oliver's holly reverb"
   Image:        ""
   Description:  ""
   InfoTitle:    "Plus d'infos"
@@ -39,7 +40,8 @@ effects:
 
 
 ### Zelda's auto wha ###
-- Title:        "Zelda's fun auto-wah"
+- class:        "zelda"
+  Title:        "Zelda's fun auto-wah"
   Image:        ""
   Description:  ""
   InfoTitle:    "Plus d'infos"
@@ -48,7 +50,8 @@ effects:
   BuyUrl:       "#"
 
 ### Tammy's compressor ###
-- Title:        "Tara's sweet compres&shy;sor"
+- class:        "tara"
+  Title:        "Tara's sweet compres&shy;sor"
   Image:        ""
   Description:  ""
   InfoTitle:    "Plus d'infos"
@@ -58,7 +61,8 @@ effects:
 
 
 ### Piggely's screaming octaver ###
-- Title:        "Piggely's screaming octaver"
+- class:        "piggely"
+  Title:        "Piggely's screaming octaver"
   Image:        ""
   Description:  ""
   InfoTitle:    "Plus d'infos"
@@ -68,7 +72,8 @@ effects:
 
 
 ### Wiggely's dirty wha-bass ###
-- Title:        "Wiggely's dirty wah-bass"
+- class:        "wiggely"
+  Title:        "Wiggely's dirty wah-bass"
   Image:        ""
   Description:  ""
   InfoTitle:    "Plus d'infos"
@@ -78,7 +83,8 @@ effects:
 
 
 ### Pigasus' extreme boost ###
-- Title:        "Pigasus' extreme boost"
+- class:        "pigasus"
+  Title:        "Pigasus' extreme boost"
   Image:        ""
   Description:  ""
   InfoTitle:    "Plus d'infos"
@@ -88,7 +94,8 @@ effects:
 
 
 ### Shaolin's warm chorus ###
-- Title:        "Shaolin's warm chorus"
+- class:        "shaolin"
+  Title:        "Shaolin's warm chorus"
   Image:        ""
   Description:  ""
   InfoTitle:    "Plus d'infos"

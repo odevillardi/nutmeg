@@ -1,130 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>Play • Nutmeg</title>
-    <meta name="description" content="">
-    <meta name="author" content="Olivier de Villardi">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-    <link rel="icon"                      href="/images/touch-nutmeg.png" />
-    <link rel="apple-touch-icon"          href="/images/touch-nutmeg.png"/>
-    <link rel="apple-touch-startup-image" href="/images/touch-nutmeg.png" />
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Play • Nutmeg">
-
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Rammetto+One" type="text/css">
-    <link rel="stylesheet" href="/dist/normalize.css">
-    <link rel="stylesheet" href="/dist/skeleton.css">
-    <link rel="stylesheet" href="/dist/nutmeg.css">
-
-    
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-      <script src="/dist/jquery.knob.min.js"></script>
-      <script>
-        $(function($) {
-          $(".knob").knob({
-            change : function (value) {
-              //console.log("change : " + value);
-              },
-              release : function (value) {
-                //console.log(this.$.attr('value'));
-                console.log("release : " + value);
-              },
-              cancel : function () {
-                console.log("cancel : ", this);
-              },
-              /*format : function (value) {
-                return value + '%';
-              },*/
-              draw : function () {
-                // "tron" case
-                if(this.$.data('skin') == 'tron') {
-
-                  this.cursorExt = 0.3;
-
-                  var a = this.arc(this.cv)  // Arc
-                  , pa                   // Previous arc
-                  , r = 1;
-
-                  this.g.lineWidth = this.lineWidth;
-
-                  if (this.o.displayPrevious) {
-                    pa = this.arc(this.v);
-                    this.g.beginPath();
-                    this.g.strokeStyle = this.pColor;
-                    this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, pa.s, pa.e, pa.d);
-                    this.g.stroke();
-                  }
-
-                this.g.beginPath();
-                this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
-                this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, a.s, a.e, a.d);
-                this.g.stroke();
-
-                this.g.lineWidth = 2;
-                this.g.beginPath();
-                this.g.strokeStyle = this.o.fgColor;
-                this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
-                this.g.stroke();
-
-                return false;
-              }
-            }
-          });
-
-        // Example of infinite knob, iPod click wheel
-        var v, up=0,down=0,i=0
-            ,$idir = $("div.idir")
-            ,$ival = $("div.ival")
-            ,incr = function() { i++; $idir.show().html("+").fadeOut(); $ival.html(i); }
-            ,decr = function() { i--; $idir.show().html("-").fadeOut(); $ival.html(i); };
-        $("input.infinite").knob(
-          {
-          min : 0
-          , max : 20
-          , stopper : false
-          , change : function () {
-            if(v > this.cv){
-              if(up){
-                decr();
-                up=0;
-              }else{up=1;down=0;}
-                } else {
-                  if(v < this.cv){
-                    if(down){
-                      incr();
-                      down=0;
-                    }else{down=1;up=0;}
-                  }
-                }
-              v = this.cv;
-            }
-          });
-        });
-      </script>
-    
-  </head>
-
-  <body>
-    <header>
-      <div class="header">
-        <a href="/"><img src="/images/nutmeg-carre.svg" alt="NUTMEG"></a>
-      </div>
-      <div class="play">
-        <a class="button" href="/play/">Play</a>
-      </div>
-    </header>
-
-    <div class="container section">
-      <h1>Play</h1>
-    </div>
-
-    <div class="board container">
-      <div class="row">
-        
+{% if include.pedal == "nutmeg" %}
 <div class="four columns pedal on nutmeg">
   <h5>Nutmeg's stinky drive</h5>
   <div class="row">
@@ -150,8 +24,7 @@
     </div>
   </div>
 </div>
-
-        
+{% elsif include.pedal == "clover" %}
 <div class="five columns pedal on clover">
   <h5>Clover's infinite echo</h5>
   <div class="row">
@@ -185,8 +58,7 @@
     </div>
   </div>
 </div>
-
-        
+{% elsif include.pedal == "oliver" %}
 <div class="three columns pedal on oliver">
   <h5>Oliver's holly reverb</h5>
   <div class="row">
@@ -208,10 +80,7 @@
     </div>
   </div>
 </div>
-
-      </div>
-      <div class="row">
-        
+{% elsif include.pedal == "zelda" %}
 <div class="four columns pedal on zelda">
   <h5>Zelda's fun auto-wha</h5>
   <div class="row">
@@ -237,8 +106,7 @@
     </div>
   </div>
 </div>
-
-        
+{% elsif include.pedal == "tara" %}
 <div class="five columns pedal on tara">
   <h5>Tara's sweet compres­sor</h5>
   <div class="row">
@@ -268,8 +136,7 @@
     </div>
   </div>
 </div>
-
-        
+{% elsif include.pedal == "piggely" %}
 <div class="three columns pedal on piggely">
   <h5>Piggely's screaming octaver</h5>
   <div class="row">
@@ -285,10 +152,7 @@
     </div>
   </div>
 </div>
-
-      </div>
-      <div class="row">
-        
+{% elsif include.pedal == "wiggely" %}
 <div class="four columns pedal on wiggely">
   <h5>Wiggely's dirty wah-bass</h5>
   <div class="row">
@@ -310,8 +174,7 @@
     </div>
   </div>
 </div>
-
-        
+{% elsif include.pedal == "pigasus" %}
 <div class="three columns pedal on pigasus">
   <h5>Pigasus' extreme boost</h5>
   <div class="row">
@@ -327,8 +190,7 @@
     </div>
   </div>
 </div>
-
-        
+{% elsif include.pedal == "shaolin" %}
 <div class="five columns pedal on shaolin">
   <h5>Shaolin's warm chorus</h5>
   <div class="row">
@@ -358,30 +220,8 @@
     </div>
   </div>
 </div>
-
-      </div>
-    </div>
-
-    <div class="container addBoard">
-      <p><a class="button u-full-width" href="/">+ 4 pédales</a></p>
-    </div>
-
-
-    <footer>
-      <div class="footer">
-        <ul>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">CGV</a></li>
-        </ul>
-      </div>
-      <div class="thanks">
-        <ul>
-          <li>Thanks</a></li>
-          <li><a href="//jekyllrb.com/">Jekyll</a></li>
-          <li><a href="//github.com">Github</a></li>
-        </ul>
-      </div>
-    </footer>
-  </body>
-</html>
+{% else %}
+<div class="three columns pedal off">
+  <a class="button" href="/effets/">+</a>
+</div>
+{% endif %}
