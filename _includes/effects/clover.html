@@ -3,21 +3,17 @@
   <div class="row">
     <div class="six columns">
       Delay<br>
-      <input class="knob" data-thickness=".2" data-width="60%" data-angleOffset=-125 data-angleArc=250 data-fgColor="#E1E1E1" data-bgColor="black" data-rotation="clockwise" value="70">
+      <input id="dtime" type="range" min="0.01" max="3" step="0.01" value="0.15" onInput="if (dtime) dtime.delayTime.value = event.target.value;">
     </div>
     <div class="six columns">
-      Mod<br>
-      <input class="knob" data-thickness=".2" data-width="60%" data-angleOffset=-125 data-angleArc=250 data-fgColor="#E1E1E1" data-bgColor="black" data-rotation="clockwise" value="70">
+      Feedback<br>
+      <input id="dregen" type="range" min="0.0" max="1.0" step="0.01" value="0.75" onInput="if (dregen) dregen.gain.value = event.target.value;">
     </div>
   </div>
   <div class="row">
-    <div class="six columns">
-      Feedback<br>
-      <input class="knob" data-thickness=".2" data-width="60%" data-angleOffset=-125 data-angleArc=250 data-fgColor="#E1E1E1" data-bgColor="black" data-rotation="clockwise" value="70">
-    </div>
-    <div class="six columns">
+    <div class="six columns offset-by-three">
       Mix<br>
-      <input class="knob" data-thickness=".2" data-width="60%" data-angleOffset=-125 data-angleArc=250 data-fgColor="#E1E1E1" data-bgColor="black" data-rotation="clockwise" value="70">
+      <input type="range" min="0.0" max="1.0" step="0.01" value="1.0" onInput="crossfade( event.target.value );">
     </div>
   </div>
   <div class="footswitches row">

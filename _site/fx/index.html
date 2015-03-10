@@ -20,9 +20,33 @@
     <link rel="stylesheet" href="/dist/skeleton.css">
     <link rel="stylesheet" href="/dist/nutmeg.css">
 
-    
+     
+      <!-- Effects scripts -->   
+      <ascript src="http://cwilso.github.io/AudioContext-MonkeyPatch/AudioContextMonkeyPatch.js"></ascript>
+
+      <!-- Visualizer stuff -->
+      <script src="js/visualizer/events.js"></script>
+
+      <!-- WebGL stuff -->
+      <script src="/dist/js/visualizer/base.js"></script>
+      <script src="/dist/js/visualizer/cameracontroller.js"></script>
+
+      <!-- TODO(kbr): remove this dependency -->
+      <script src="/dist/js/visualizer/matrix4x4.js"></script>
+
+      <!-- Visualizer GL library -->
+      <script src="/dist/js/visualizer/visualizer.js"></script>
+      <script src="/dist/js/visualizer/shader.js"></script>
+
+      <script src="/dist/js/effect.js"></script>
+      <script src="/dist/js/waveshaper.js"></script>
+      <script src="/dist/js/jungle.js"></script>
+      <script src="/dist/js/effects.js"></script>
+      <script src="/dist/js/pingpong.js"></script>
+
+      <!-- Knob scripts -->
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-      <script src="/dist/jquery.knob.min.js"></script>
+      <script src="/dist/js/jquery.knob.min.js"></script>
       <script>
         $(function($) {
           $(".knob").knob({
@@ -122,11 +146,41 @@
 
     <div class="container section">
       <h1>Fx</h1>
+      Mono input: <input type="checkbox" checked onchange="toggleMono()">
+      <div id="arranger">
+        <canvas id="view1" height="0"></canvas>
+        <canvas id="view2" height="0"></canvas>
+        <div id="effectMix">Effect:
+          <select id="effect">
+            <option>Delay </option>
+            <option>Reverb </option>
+            <option>Distortion </option>
+            <option>Telephone </option>
+            <option>Gain LFO </option>
+            <option>Chorus </option>
+            <option>Flange </option>
+            <option>Ring mod </option>
+            <option>Stereo Chorus </option>
+            <option>Stereo Flange </option>
+            <option>Pitch Shifter </option>
+            <option>Mod Delay </option>
+            <option>Ping-pong delay</option>
+            <option>LFO Filter</option>
+            <option>Envelope Follower (testing only)</option>
+            <option>Autowah</option>
+            <option>Noise Gate</option>
+            <option>Wah Bass</option>
+            <option>Distorted Wah Chorus</option>
+            <option>Vibrato</option>
+            <option>BitCrusher</option>
+          </select>
+        </div>
+      </div>
     </div>
 
-    <div class="board container">
+    <div id="controls" class="board container">
       <div class="row">
-        <div class="four columns pedal on nutmeg">
+        <!-- <div class="four columns pedal on nutmeg">
   <h5>Nutmeg's stinky drive</h5>
   <div class="row">
     <div class="six columns">
@@ -141,7 +195,8 @@
   <div class="row">
     <div class="eight columns offset-by-two">
       Drive<br>
-      <input class="knob" data-thickness=".2" data-width="60%" data-angleOffset=-125 data-angleArc=250 data-fgColor="#E1E1E1" data-bgColor="black" data-rotation="clockwise" value="70">
+      <input type="range" min="0.01" max="20" step="0.01" value="5" style="height: 20px; width: 200px;" 
+    onInput="if (waveshaper) waveshaper.setDrive(event.target.value);">
     </div>
   </div>
   <div class="footswitches row">
@@ -150,27 +205,23 @@
       <a class="button button-primary" href="#">A</a>
     </div>
   </div>
-</div>
+</div> -->
         <div class="five columns pedal on clover">
   <h5>Clover's infinite echo</h5>
   <div class="row">
     <div class="six columns">
       Delay<br>
-      <input class="knob" data-thickness=".2" data-width="60%" data-angleOffset=-125 data-angleArc=250 data-fgColor="#E1E1E1" data-bgColor="black" data-rotation="clockwise" value="70">
+      <input id="dtime" type="range" min="0.01" max="3" step="0.01" value="0.15" onInput="if (dtime) dtime.delayTime.value = event.target.value;">
     </div>
     <div class="six columns">
-      Mod<br>
-      <input class="knob" data-thickness=".2" data-width="60%" data-angleOffset=-125 data-angleArc=250 data-fgColor="#E1E1E1" data-bgColor="black" data-rotation="clockwise" value="70">
+      Feedback<br>
+      <input id="dregen" type="range" min="0.0" max="1.0" step="0.01" value="0.75" onInput="if (dregen) dregen.gain.value = event.target.value;">
     </div>
   </div>
   <div class="row">
-    <div class="six columns">
-      Feedback<br>
-      <input class="knob" data-thickness=".2" data-width="60%" data-angleOffset=-125 data-angleArc=250 data-fgColor="#E1E1E1" data-bgColor="black" data-rotation="clockwise" value="70">
-    </div>
-    <div class="six columns">
+    <div class="six columns offset-by-three">
       Mix<br>
-      <input class="knob" data-thickness=".2" data-width="60%" data-angleOffset=-125 data-angleArc=250 data-fgColor="#E1E1E1" data-bgColor="black" data-rotation="clockwise" value="70">
+      <input type="range" min="0.0" max="1.0" step="0.01" value="1.0" onInput="crossfade( event.target.value );">
     </div>
   </div>
   <div class="footswitches row">
@@ -184,7 +235,7 @@
     </div>
   </div>
 </div>
-        <div class="three columns pedal on oliver">
+        <!-- <div class="three columns pedal on oliver">
   <h5>Oliver's holly reverb</h5>
   <div class="row">
     <div class="eight columns offset-by-two">
@@ -204,9 +255,9 @@
       <a class="button button-primary" href="#">D</a>
     </div>
   </div>
-</div>
+</div> -->
       </div>
-      <div class="row">
+<!--       <div class="row">
         <div class="four columns pedal on zelda">
   <h5>Zelda's fun auto-wha</h5>
   <div class="row">
@@ -343,7 +394,7 @@
     </div>
   </div>
 </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="container addBoard">

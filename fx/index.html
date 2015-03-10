@@ -6,15 +6,45 @@ title: "FX • Nutmeg"
 
     <div class="container section">
       <h1>Fx</h1>
+      Mono input: <input type="checkbox" checked onchange="toggleMono()">
+      <div id="arranger">
+        <canvas id="view1" height="0"></canvas>
+        <canvas id="view2" height="0"></canvas>
+        <div id="effectMix">Effect:
+          <select id="effect">
+            <option>Delay </option>
+            <option>Reverb </option>
+            <option>Distortion </option>
+            <option>Telephone </option>
+            <option>Gain LFO </option>
+            <option>Chorus </option>
+            <option>Flange </option>
+            <option>Ring mod </option>
+            <option>Stereo Chorus </option>
+            <option>Stereo Flange </option>
+            <option>Pitch Shifter </option>
+            <option>Mod Delay </option>
+            <option>Ping-pong delay</option>
+            <option>LFO Filter</option>
+            <option>Envelope Follower (testing only)</option>
+            <option>Autowah</option>
+            <option>Noise Gate</option>
+            <option>Wah Bass</option>
+            <option>Distorted Wah Chorus</option>
+            <option>Vibrato</option>
+            <option>BitCrusher</option>
+          </select>
+        </div>
+      </div>
     </div>
 
-    <div class="board container">
+    <div id="controls" class="board container">
       <div class="row">
-        {% include effects/nutmeg.html %}
+        <!-- {% include effects/nutmeg.html %} -->
         {% include effects/clover.html %}
-        {% include effects/oliver.html %}
+        <!-- {% include effects/oliver.html %} -->
       </div>
-      <div class="row">
+<!--       <div class="row">
         {% include effects/zelda.html %}
         {% include effects/tara.html %}
         {% include effects/piggely.html %}
@@ -23,7 +53,7 @@ title: "FX • Nutmeg"
         {% include effects/wiggely.html %}
         {% include effects/pigasus.html %}
         {% include effects/shaolin.html %}
-      </div>
+      </div> -->
     </div>
 
     <div class="container addBoard">
