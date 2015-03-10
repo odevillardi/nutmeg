@@ -1,0 +1,34 @@
+---
+title: "Play • Nutmeg"
+---
+
+{% include header.html title=page.title js=true %}
+
+    <div class="container section">
+      <h1>Play</h1>
+    </div>
+
+    <div class="board container">
+      <div class="row">
+        {% include effects.html pedal="nutmeg" %}
+        {% include effects.html pedal="clover" %}
+        {% include effects.html pedal="oliver" %}
+      </div>
+      <div class="row">
+        {% include effects.html pedal="zelda" %}
+        {% include effects.html pedal="tara" %}
+        {% include effects.html pedal="piggely" %}
+      </div>
+      <div class="row">
+        {% include effects.html pedal="wiggely" %}
+        {% include effects.html pedal="pigasus" %}
+        {% include effects.html pedal="shaolin" %}
+      </div>
+    </div>
+
+    <div class="container addBoard">
+      <p><a class="button u-full-width" href="/">+ 4 pédales</a></p>
+    </div>
+
+
+{% include footer.html %}
