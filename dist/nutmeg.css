@@ -234,13 +234,8 @@ input[type="button"].button-primary:focus {
 
 /* Board
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.board .button-primary {
-  border-radius: 50%;
-}
-
-.board .button:before {
-  content: none;
-}
+.board .button-primary { border-radius: 50%; }
+.board .button:before { content: none; }
 
 .pedal {
   border: 3px solid #E1E1E1;
@@ -249,15 +244,21 @@ input[type="button"].button-primary:focus {
   font-size: 1.8rem;
 }
 
+.pedal.on {
+  background: url('../images/backgrounds/dark-blackboard.png');
+  background-size: cover;
+}
+
 .pedal.off {
   border-style: dashed;
   border-width: 1px;
   border-radius: 0;
 }
 
-.addBoard, .pedal {
+.addBoard,
+.pedal {
   text-align: center;
-  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .pedal input[type=range] {
@@ -276,21 +277,19 @@ input[type="button"].button-primary:focus {
 .footswitches .active { color: rgba(235, 235, 235, 1); }
 
 @media (min-width: 750px) {
-  .board {
+  .board .row {
     display: flex;
     align-items: flex-end;
   }
 
   .pedal {
     margin-top: 0;
-    min-height: 40rem;
+    min-height: 30rem;
   }
 }
 
 @media (min-width: 1000px) {
-  .addBoard {
-    height: 20rem;
-  }
+  .addBoard { height: 20rem; }
 }
 
 /* Pedals
