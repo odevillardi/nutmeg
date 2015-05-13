@@ -1,0 +1,51 @@
+### Effets ###
+Titre:          "Effets"
+Description:    "Personnalisables, <abbr title='Haute technologie'>High-Tech</abbr>, open-source."
+AddDescription: "Fabriqués sur les Internets."
+LinkTitle:      "Utiliser nos effets"
+LinkUrl:        "/effets/"
+
+### Effects ###
+effects:
+### Nutmeg's stinky drive ###
+- class:        "nutmeg"
+  Title:        "Nutmeg’s stinky drive"
+
+### Clover's infinite echo ###
+- class:        "clover"
+  Title:        "Clover’s infinite echo"
+
+
+### Oliver's holly reverb ###
+- class:        "oliver"
+  Title:        "Oliver’s holly reverb"
+
+
+### Zelda's auto wha ###
+- class:        "zelda"
+  Title:        "Zelda’s fun auto-wah"
+
+### Tammy's compressor ###
+- class:        "tara"
+  Title:        "Tara’s sweet compres&shy;sor"
+
+
+### Piggely's screaming octaver ###
+- class:        "piggely"
+  Title:        "Piggely’s screaming octaver"
+
+
+### Wiggely's dirty wha-bass ###
+- class:        "wiggely"
+  Title:        "Wiggely’s dirty wah-bass"
+
+
+### Pigasus' extreme boost ###
+- class:        "pigasus"
+  Title:        "Pigasus’ extreme boost"
+
+
+### Shaolin's warm chorus ###
+- class:        "shaolin"
+  Title:        "Shaolin’s warm chorus"
+

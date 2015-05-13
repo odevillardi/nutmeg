@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact · Nutmeg</title>
+    <meta name="description" content="">
+    <meta name="author" content="Nutmeg">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Contact · Nutmeg">
+
+    <link rel="icon" href="/dist/images/favicon-nutmeg.png">
+    <link rel="apple-touch-icon" href="/dist/images/touch-nutmeg.png">
+
+    <meta name="og:title"       content="Nutmeg">
+    <meta name="og:description" content="Guitares et effets" />
+    <meta name="og:image"       content="/dist/images/nutmeg.svg">
+
+    <meta name="twitter:card"        content="summary">
+    <meta name="twitter:site"        content="@Nutmeg_fr">
+    <meta name="twitter:creator"     content="@Nutmeg_fr">
+    <meta name="twitter:title"       content="Nutmeg">
+    <meta name="twitter:image"       content="/dist/images/nutmeg.svg">
+    <meta name="twitter:description" content="Guitares et effets" />
+    <meta name="twitter:url"         content="/contact/index.html" />
+    
+    
+    <link rel="stylesheet" href="/dist/css/nutmeg.css">
+    
+  </head>
+
+  <body>
+  <header id="menu">
+  <div class="header">
+    <a href="/">
+      <img class="logo" src="/dist/images/nutmeg.svg" alt="Logo Nutmeg">
+    </a>
+  </div>
+  
+    <div class="menu">
+      <a class="button black" href="#menu" title="Afficher le menu">Menu</a>
+      <ul class="inline-list">
+        <li><a href="/guitares/">Guitares</a></li>
+        <li><a href="/effets/">Effets</a></li>
+        <li><a href="/contact/" class="active">Contact</a></li>
+      </ul>
+      <a href="#" class="close lead" title="Fermer le menu">&times;</a>
+    </div>
+  
+</header>
+
+    <div class="container section nocrumbs last-section">
+      <h1>Contact</h1>
+      <p class="lead">
+        Pour nous contacter&nbsp;: remplis le formulaire, ou écris-nous sur Twitter <a href="//twitter.com/Nutmeg_fr">@Nutmeg_fr</a>.
+      </p>
+      <div class="row">
+        <form class="formulaire" action="https://getsimpleform.com/messages?form_api_token=66472dc236aa9c01a6e561a249236e2d" method="post">
+          <input type='hidden' name='redirect_to' value='http://127.0.0.1:4000/contact/merci.html'>
+          <label for="email">Adresse email <small>(Pour te répondre. Uniquement.)</small></label>
+          <input class="u-full-width" id="email" placeholder="ton_email@mailbox.com" name="email" type="email" required="required">
+          <label for="objet">Objet</label>
+          <select class="u-full-width" id="objet" name="objet" required="required">
+            <option></option>
+            <option value="Essayer une guitare">Essayer une guitare</option>
+            <option value="Question sur les effets">Question sur les effets</option>
+            <option value="Autre">Autre</option>
+          </select>
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Salut…" class="u-full-width" name="message" required="required"></textarea>
+          <button class="button button-primary u-full-width" type="submit">Envoyer</button>
+        </form>
+        <p class="mention">(Formulaire garanti sans SPAM et sans <acronym title="Organisme Génétiquement Modifié">OGM</acronym>)</p>
+      </div>
+    </div>
+
+  <footer>
+  <div class="footer">
+    <ul class="inline-list">
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/a-propos/">À propos</a></li>
+      <li><a href="/remerciements/">Merci</a></a></li>
+    </ul>
+  </div>
+  <div class="thanks">
+    <ul class="inline-list">
+      <li><a href="/faq/"><abbr title="Foire Aux Questions">FAQ</abbr></a></li>
+      <li><a href="/cgv/"><abbr title="Conditions Générales de Vente">CGV</abbr></a></li>
+    </ul>
+  </div>
+</footer>
+    <script type="application/ld+json">
+      {  "@context" : "http://schema.org",
+         "@type" : "WebSite",
+         "name" : "Nutmeg",
+         "url" : "http://nutmeg.fr/"
+      }
+    </script>
+    <script>
+      WebFontConfig = {
+        google: {
+          families: ['Ovo', 'Lato:300,700', 'PT+Mono']
+        },
+        timeout: 2000
+      };
+
+     (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js';
+        s.parentNode.insertBefore(wf, s);
+     })(document);
+    </script>
+  </body>
+</html>

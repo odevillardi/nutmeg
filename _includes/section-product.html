@@ -1,22 +1,33 @@
 <h2>{{ include.title }}</h2>
-<div class="row">
-  {% if include.image != "" %}
-    <div class="four columns">
-      <img class="u-max-full-width" src="{{ site.baseurl }}{{ include.image }}" alt="{{ include.title | strip_html }}">
+<div class="row flex-row">
+  {% if include.image %}
+    <div class="seven columns cover-container">
+    {% if include.infoUrl %}
+      <a href="{{ site.baseurl }}{{ include.infoUrl }}">
+    {% endif %}
+        <img class="u-max-full-width cover" src="{{ site.baseurl }}{{ include.image }}" alt="{{ include.title | strip_html }}">
+    {% if include.infoUrl %}
+      </a>
+    {% endif %}
     </div>
   {% endif %}
-  <div class="{% if include.image != "" %}four{% else %}eight{% endif %} columns">
-    <p>{{ include.description }}</p>
-    {% if include.infoUrl != "" %}
-      <p><a class="button" href="{{ site.baseurl }}{{ include.infoUrl }}">{{ include.infoTitle }}</a></p>
-    {% endif %}
-  </div>
-  <div class="four columns">
-    {% if include.linkUrl != "" %}
-      <p class="price">{{ include.price }}</p>
-    {% endif %}
-    {% if include.buyUrl != "" %}
-      <p><a class="button button-primary" href="{{ site.baseurl }}{{ include.buyUrl }}">{{ include.buyTitle }}</a></p>
+  <div class="five columns text-center">
+    <p class="lead">{{ include.description }}</p>
+    {% if include.buyUrl %}
+      {% if include.infoUrl %}
+        <a class="button" href="{{ site.baseurl }}{{ include.infoUrl }}">{{ include.infoTitle }}</a>
+      {% endif %}
+      {% if include.price %}
+        <p>{{ include.price }}</p>
+      {% endif %}
+        <a class="button button-primary u-full-width" href="{{ site.baseurl }}{{ include.buyUrl }}">{{ include.buyTitle }}</a>
+    {% else %}
+      {% if include.price %}
+        <p>{{ include.price }}</p>
+      {% endif %}
+      {% if include.infoTitle %}
+        <a class="button{% if include.infoUrl %} button-primary{% else %} disabled{% endif %} u-full-width"{% if include.infoUrl %} href="{{ site.baseurl }}{{ include.infoUrl }}"{% endif %}>{{ include.infoTitle }}</a>
+      {% endif %}
     {% endif %}
   </div>
 </div>

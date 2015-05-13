@@ -2,40 +2,55 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Nutmeg • Guitares, effets et pédales</title>
+    <title>Nutmeg · Guitares et effets</title>
     <meta name="description" content="">
-    <meta name="author" content="Olivier de Villardi">
-
+    <meta name="author" content="Nutmeg">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Nutmeg · Guitares et effets">
 
-    <link rel="icon"                      href="/images/touch-nutmeg.png" />
-    <link rel="apple-touch-icon"          href="/images/touch-nutmeg.png"/>
-    <link rel="apple-touch-startup-image" href="/images/touch-nutmeg.png" />
+    <link rel="icon" href="/dist/images/favicon-nutmeg.png">
+    <link rel="apple-touch-icon" href="/dist/images/touch-nutmeg.png">
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Nutmeg • Guitares, effets et pédales">
+    <meta name="og:title"       content="Nutmeg">
+    <meta name="og:description" content="Guitares et effets" />
+    <meta name="og:image"       content="/dist/images/nutmeg.svg">
 
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Rammetto+One" type="text/css">
-    <link rel="stylesheet" href="/dist/normalize.css">
-    <link rel="stylesheet" href="/dist/skeleton.css">
-    <link rel="stylesheet" href="/dist/nutmeg.css">
-
+    <meta name="twitter:card"        content="summary">
+    <meta name="twitter:site"        content="@Nutmeg_fr">
+    <meta name="twitter:creator"     content="@Nutmeg_fr">
+    <meta name="twitter:title"       content="Nutmeg">
+    <meta name="twitter:image"       content="/dist/images/nutmeg.svg">
+    <meta name="twitter:description" content="Guitares et effets" />
+    <meta name="twitter:url"         content="/index.html" />
+    
+    
+    <link rel="stylesheet" href="/dist/css/nutmeg.css">
     
   </head>
 
   <body>
-    <header>
-      <div class="header">
-        <a href="/"><img src="/images/nutmeg-carre.svg" alt="NUTMEG"></a>
-      </div>
-      <div class="play">
-        
-          <a class="button" href="/fx/">Fx</a>
-        
-      </div>
-    </header>
+  <header id="menu">
+  <div class="header">
+    <a href="/">
+      <img class="logo" src="/dist/images/nutmeg.svg" alt="Logo Nutmeg">
+    </a>
+  </div>
+  
+    <div class="menu">
+      <a class="button black" href="#menu" title="Afficher le menu">Menu</a>
+      <ul class="inline-list">
+        <li><a href="/guitares/">Guitares</a></li>
+        <li><a href="/effets/">Effets</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <a href="#" class="close lead" title="Fermer le menu">&times;</a>
+    </div>
+  
+</header>
 
-    <div class="bazinga guitars first-bazinga">
+    <div class="bazinga guitares first-bazinga">
       <div class="container">
         <div class="six columns offset-by-">
   <a href="/guitares/">
@@ -43,7 +58,7 @@
   <h1>Guitares</h1>
     
     
-  <p>Artisanales, <abbr title='Basse technologie'>Low-Tech</abbr>, matériaux recyclées.</p>          
+  <p class="lead">Artisanales, <abbr title='Basse technologie'>Low-Tech</abbr>, matériaux recyclées.</p>          
     
     
   <span class="button button-primary">Voir nos guitares</span>
@@ -53,56 +68,59 @@
       </div>
     </div>
 
-    <div class="bazinga fx">
+    <div class="bazinga effets last-bazinga">
       <div class="container">
         <div class="six columns offset-by-six">
-  <a href="/fx/">
+  <a href="/effets/">
     
-  <h1>Fx</h1>
-    
-    
-  <p>Personnalisables, <abbr title='Haute technologie'>High-Tech</abbr>, open-source.</p>          
+  <h1>Effets</h1>
     
     
-  <span class="button button-primary">Voir nos effets</span>
-    
-  </a>
-</div>
-      </div>
-    </div>
-
-    <div class="bazinga pedals last-bazinga">
-      <div class="container">
-        <div class="six columns offset-by-">
-  <a href="/pedales/">
-    
-  <h1>Pédales</h1>
+  <p class="lead">Personnalisables, <abbr title='Haute technologie'>High-Tech</abbr>, open-source.</p>          
     
     
-  <p>Paramétrables, robustes, basse consommation.</p>          
-    
-    
-  <span class="button button-primary">Voir nos pédales</span>
+  <span class="button button-primary">Utiliser nos effets</span>
     
   </a>
 </div>
       </div>
     </div>
 
-    <footer>
-      <div class="footer">
-        <ul>
-          <li><a href="#">À propos</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">CGV</a></li>
-        </ul>
-      </div>
-      <div class="thanks">
-        <ul>
-          <li><a href="#">Merci</a></a></li>
-          <li><a href="#">Crédits</a></li>
-        </ul>
-      </div>
-    </footer>
+  <footer>
+  <div class="footer">
+    <ul class="inline-list">
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/a-propos/">À propos</a></li>
+      <li><a href="/remerciements/">Merci</a></a></li>
+    </ul>
+  </div>
+  <div class="thanks">
+    <ul class="inline-list">
+      <li><a href="/faq/"><abbr title="Foire Aux Questions">FAQ</abbr></a></li>
+      <li><a href="/cgv/"><abbr title="Conditions Générales de Vente">CGV</abbr></a></li>
+    </ul>
+  </div>
+</footer>
+    <script type="application/ld+json">
+      {  "@context" : "http://schema.org",
+         "@type" : "WebSite",
+         "name" : "Nutmeg",
+         "url" : "http://nutmeg.fr/"
+      }
+    </script>
+    <script>
+      WebFontConfig = {
+        google: {
+          families: ['Ovo', 'Lato:300,700', 'PT+Mono']
+        },
+        timeout: 2000
+      };
+
+     (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js';
+        s.parentNode.insertBefore(wf, s);
+     })(document);
+    </script>
   </body>
 </html>

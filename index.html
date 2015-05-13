@@ -1,25 +1,40 @@
 ---
-title: "Nutmeg • Guitares, effets et pédales"
+title: "Nutmeg · Guitares et effets"
+description: ""
+
+js:
+noindex:
+
+menu: 1
+activeGuitares:
+activeEffets:
+activeContact:
+
+twitterCard:        "summary"
+twitterCreator:     "@Nutmeg_fr"
+twitterTitle:       "Nutmeg"
+twitterImageUrl:    "/dist/images/nutmeg.svg"
+twitterDescription: "Guitares et effets"
+twitterData1:
+twitterLabel1:
+twitterData2:
+twitterLabel2:
 ---
 
-{% include header.html title=page.title %}
+{% include head.html %}
+  {% include header.html %}
 
-    <div class="bazinga guitars first-bazinga">
+    <div class="bazinga guitares first-bazinga">
       <div class="container">
-        {% include bazinga.html title=site.data.guitars.Titre image=site.data.guitars.Image description=site.data.guitars.Description linkTitle=site.data.guitars.LinkTitle linkUrl=site.data.guitars.LinkUrl offset="" titleLevel="1" buttonPrimary="-primary" %}
+        {% include bazinga.html title=site.data.guitares.Titre image=site.data.guitares.Image description=site.data.guitares.Description linkTitle=site.data.guitares.LinkTitle linkUrl=site.data.guitares.LinkUrl offset="" titleLevel="1" buttonPrimary="-primary" %}
       </div>
     </div>
 
-    <div class="bazinga fx">
+    <div class="bazinga effets last-bazinga">
       <div class="container">
-        {% include bazinga.html title=site.data.fx.Titre image=site.data.fx.Image description=site.data.fx.Description linkTitle=site.data.fx.LinkTitle linkUrl=site.data.fx.LinkUrl offset="six" titleLevel="1" buttonPrimary="-primary" %}
+        {% include bazinga.html title=site.data.effets.Titre image=site.data.effets.Image description=site.data.effets.Description linkTitle=site.data.effets.LinkTitle linkUrl=site.data.effets.LinkUrl offset="six" titleLevel="1" buttonPrimary="-primary" %}
       </div>
     </div>
 
-    <div class="bazinga pedals last-bazinga">
-      <div class="container">
-        {% include bazinga.html title=site.data.pedals.Titre image=site.data.pedals.Image description=site.data.pedals.Description linkTitle=site.data.pedals.LinkTitle linkUrl=site.data.pedals.LinkUrl offset="" titleLevel="1" buttonPrimary="-primary" %}
-      </div>
-    </div>
-
-{% include footer.html %}
+  {% include footer.html %}
+{% include foot.html %}

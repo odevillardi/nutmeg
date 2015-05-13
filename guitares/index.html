@@ -1,35 +1,80 @@
 ---
-title: "Guitares • Nutmeg"
+title: "Guitares · Nutmeg"
+description: ""
+
+js:
+noindex:
+
+menu: 1
+activeGuitares: 1
+activeEffets:
+activeContact:
+
+twitterCard:        "summary"
+twitterCreator:     "@Nutmeg_fr"
+twitterTitle:       "Nutmeg"
+twitterImageUrl:    "/dist/images/nutmeg.svg"
+twitterDescription: "Guitares et effets"
+twitterData1:
+twitterLabel1:
+twitterData2:
+twitterLabel2:
 ---
 
-{% include header.html title=page.title %}
+{% include head.html title=page.title %}
+{% include header.html menu=1 activeGuitares=1 %}
 
     <div class="container section">
-      <h1>{{ site.data.guitars.Titre }}</h1>
-      <p>
-        {{ site.data.guitars.Description }}
+
+      <div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
+        <span typeof="v:Breadcrumb">
+          <a href="{{ site.baseurl }}/" rel="v:url" property="v:title">Nutmeg</a>
+        </span>
+      </div>
+
+      <h1>{{ site.data.guitares.Titre }}</h1>
+      <p class="lead">
+        {{ site.data.guitares.Description }}
         <br>
-        {{ site.data.guitars.AddDescription }}
+        {{ site.data.guitares.AddDescription }}
       </p>
-      {% for serie in site.data.guitars.series %}
-        {% include section-product.html title=serie.Title image=serie.Image description=serie.Description buyTitle=serie.BuyTitle buyUrl=serie.BuyUrl infoTitle=serie.InfoTitle infoUrl=serie.InfoUrl offset=serie.Offset price=serie.Price %}
-      {% endfor %}
+
+      <div class="row">
+        <div class="four columns">
+          <h3>Design</h3>
+          <p>On détourne des matériaux pour créer des guitares au style original. Skateboard ou plan de travail&nbsp;? Choisis ton camp camarade&nbsp;!</p>
+          <a class="button u-full-width" href="#catalogue">Choisir</a>
+        </div>
+        <div class="four columns">
+          <h3>Custom</h3>
+          <p>Crée ta guitare&nbsp;: choisis ta planche, ton accastillage, ton son et tes finitions. Une guitare artisanale totalement unique.</p>
+          <a class="button u-full-width disabled">Bientôt</a>
+        </div>
+        <div class="four columns">
+          <h3>Recyclé</h3>
+          <p>Une envie très personnelle&nbsp;? Fournis-nous les matériaux que tu veux recycler, décris-nous ton projet. On s’occupe du reste.</p>
+          <a class="button u-full-width" href="{{ site.baseurl }}{{ site.data.boutons.contactLong.url }}">{{ site.data.boutons.contactLong.name }}</a>
+        </div>
+      </div>
+
+      <div id="catalogue">
+        {% for serie in site.data.guitares.series %}
+          {% include section-product.html title=serie.Title image=serie.Image description=serie.Description infoTitle=serie.InfoTitle infoUrl=serie.InfoUrl offset=serie.Offset price=serie.Price %}
+        {% endfor %}
+      </div>
     </div>
 
     <div class="discover">
       <div class="container">
-        <h4>Découvrez aussi nos effets et pédales</h4>
+        <h4>Découvrez aussi nos effets</h4>
       </div>
     </div>
       
-    <div class="bazinga fx last-bazinga">
+    <div class="bazinga effets last-bazinga">
       <div class="container">
-        <div class="row">
-          {% include bazinga.html title=site.data.fx.Titre image=site.data.fx.Image description=site.data.fx.Description linkTitle=site.data.fx.LinkTitle linkUrl=site.data.fx.LinkUrl offset="" titleLevel="3" %}
-          
-          {% include bazinga.html title=site.data.pedals.Titre image=site.data.pedals.Image description=site.data.pedals.Description linkTitle=site.data.pedals.LinkTitle linkUrl=site.data.pedals.LinkUrl offset="" titleLevel="3" %}
-        </div>
+        {% include bazinga.html title=site.data.effets.Titre image=site.data.effets.Image description=site.data.effets.Description linkTitle=site.data.effets.LinkTitle linkUrl=site.data.effets.LinkUrl offset="" titleLevel="3" %}
       </div>
     </div>
 
 {% include footer.html %}
+{% include foot.html %}

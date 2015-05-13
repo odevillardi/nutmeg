@@ -1,0 +1,53 @@
+---
+title: "Contact · Nutmeg"
+description: ""
+
+js:
+noindex:
+
+menu: 1
+activeGuitares:
+activeEffets:
+activeContact: 1
+
+twitterCard:        "summary"
+twitterCreator:     "@Nutmeg_fr"
+twitterTitle:       "Nutmeg"
+twitterImageUrl:    "/dist/images/nutmeg.svg"
+twitterDescription: "Guitares et effets"
+twitterData1:
+twitterLabel1:
+twitterData2:
+twitterLabel2:
+---
+
+{% include head.html %}
+  {% include header.html %}
+
+    <div class="container section nocrumbs last-section">
+      <h1>Contact</h1>
+      <p class="lead">
+        Pour nous contacter&nbsp;: remplis le formulaire, ou écris-nous sur Twitter <a href="//twitter.com/Nutmeg_fr">@Nutmeg_fr</a>.
+      </p>
+      <div class="row">
+        <form class="formulaire" action="https://getsimpleform.com/messages?form_api_token=66472dc236aa9c01a6e561a249236e2d" method="post">
+          <input type='hidden' name='redirect_to' value='http://127.0.0.1:4000/contact/merci.html'>
+          <label for="email">Adresse email <small>(Pour te répondre. Uniquement.)</small></label>
+          <input class="u-full-width" id="email" placeholder="ton_email@mailbox.com" name="email" type="email" required="required">
+          <label for="objet">Objet</label>
+          <select class="u-full-width" id="objet" name="objet" required="required">
+            <option></option>
+            <option value="Essayer une guitare">Essayer une guitare</option>
+            <option value="Question sur les effets">Question sur les effets</option>
+            <option value="Autre">Autre</option>
+          </select>
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Salut…" class="u-full-width" name="message" required="required"></textarea>
+          <button class="button button-primary u-full-width" type="submit">Envoyer</button>
+        </form>
+        <p class="mention">(Formulaire garanti sans SPAM et sans <acronym title="Organisme Génétiquement Modifié">OGM</acronym>)</p>
+      </div>
+    </div>
+
+  {% include footer.html %}
+{% include foot.html %}

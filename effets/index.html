@@ -1,0 +1,76 @@
+---
+title: "Effets · Nutmeg"
+description: ""
+
+js: 1
+noindex:
+
+menu: 1
+activeGuitares:
+activeEffets: 1
+activeContact:
+
+twitterCard:        "summary"
+twitterCreator:     "@Nutmeg_fr"
+twitterTitle:       "Nutmeg"
+twitterImageUrl:    "/dist/images/nutmeg.svg"
+twitterDescription: "Guitares et effets"
+twitterData1:
+twitterLabel1:
+twitterData2:
+twitterLabel2:
+---
+
+{% include head.html %}
+{% include header.html %}
+
+    <div class="container section">
+
+      <div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
+        <span typeof="v:Breadcrumb">
+          <a href="{{ site.baseurl }}/" rel="v:url" property="v:title">Nutmeg</a>
+        </span>
+      </div>
+
+      <h1>{{ site.data.effets.Titre }} <small>(v 0.1)</small></h1>
+      <p class="lead">
+        Attention, à utiliser avec moult précautions :) (<a href="{{ site.baseurl }}/faq/#effets">En savoir plus</a>)
+      </p>
+      <p>
+        Effets activés : <button id="overallEffects" class="button button-primary off" onclick="switchEffet(this,'overall');">A</button>
+      </p>
+    </div>
+
+    <div id="controls" class="board container">
+      <div class="row">
+        {% include effet.html name="piggely" title="Piggely's screaming Octaver" effet="octaver" key="O" %}
+        {% include effet.html name="zelda"   title="Zelda's fun auto-Wha"        effet="wha"     key="W" %}
+        {% include effet.html name="tara"    title="Tara's sweet Compressor"     effet="comp"    key="C" %}
+        {% include effet.html name="nutmeg"  title="Nutmeg's dirty Drive"        effet="drive"   key="D" %}
+      </div>
+      <div class="row">
+        {% include effet.html name="shaolin" title="Shaolin's warm Chorus"  effet="chorus" key="H" %}
+        {% include effet.html name="pigasus" title="Pigasus' extreme Boost" effet="boost"  key="B" %}
+        {% include effet.html name="clover"  title="Clover's infinite Echo" effet="echo"   key="E" %}
+        {% include effet.html name="oliver"  title="Oliver's holly Reverb"  effet="reverb" key="R" %}
+      </div>
+<!--       <div class="row">
+        {% include effets/empty.html %}
+      </div> -->
+    </div>
+
+    <div class="discover">
+      <div class="container">
+        <h4>Découvrez aussi nos guitares</h4>
+      </div>
+    </div>
+      
+    <div class="bazinga guitares last-bazinga">
+      <div class="container">
+        {% include bazinga.html title=site.data.guitares.Titre image=site.data.guitares.Image description=site.data.guitares.Description linkTitle=site.data.guitares.LinkTitle linkUrl=site.data.guitares.LinkUrl offset="" titleLevel="3" %}
+      </div>
+    </div>
+
+
+{% include footer.html %}
+{% include foot.html %}

@@ -1,0 +1,28 @@
+
+### Pédales ###
+Titre:        "Pédales"
+Description:  "Excessivement simples, robustes, basse consommation."
+LinkTitle:    "Voir nos pédales"
+LinkUrl:      "/pedales/"
+
+### Pédales ###
+pedals:
+### True bypass ###
+- Title:        "True bypass"
+  Image:        "/dist/images/588x588.JPG"
+  Description:  "Bypassez simplement votre ou vos <a href='/effects/'>effets Nutmeg</a>."
+  Price:        "Seulement<br><strong class='lead'>29</strong>€"
+  InfoTitle:    "En savoir plus"
+  InfoUrl:      "#"
+  BuyTitle:     "Nous contacter"
+  BuyUrl:       "/contact/"
+
+### FS 02 ###
+- Title:        "<abbr title='Footswitch'>FS</abbr> 02"
+  Image:        "/dist/images/588x588.JPG"
+  Description:  "Contrôlez 1 ou 2 <a href='/effects/''>effets Nutmeg</a>."
+  Price:        "Seulement<br><strong class='lead'>39</strong>€"
+  InfoTitle:    "En savoir plus"
+  InfoUrl:      "#"
+  BuyTitle:     "Nous contacter"
+  BuyUrl:       "/contact/"

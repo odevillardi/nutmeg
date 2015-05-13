@@ -1,0 +1,66 @@
+### Guitares ###
+Titre:          "Guitares"
+Description:    "Artisanales, <abbr title='Basse technologie'>Low-Tech</abbr>, matériaux recyclées."
+AddDescription: "Made in France, bien sûr."
+LinkTitle:      "Voir nos guitares"
+LinkUrl:        "/guitares/"
+
+### Guitar series ###
+series:
+
+### Guitares skateboard ###
+- Title:        "Guitares skateboard"
+  Image:        "/dist/images/guitares/skateboard/nutmeg-skateboard.jpg"
+  Description:  "On recycle des vieux skateboards usés pour les transformer en guitares."
+  AddDescription: "Un design freestyle et un son crunchy, le tout recyclé et personnalisable pour des guitares uniques."
+  Price:        "À partir de<br><strong class='lead'>299</strong>€"
+  InfoTitle:    "Découvrir"
+  InfoUrl:      "/guitares/skateboard/"
+  Merci:        "Un gros gros merci à <a href='http://www.nozbone.com/'>Nozbone</a> pour les planches&nbsp;!"
+  Guitars:
+
+  ### Nut One ###
+  - Name:         "Nut One"
+    Title:        "Nut One"
+    Image:        "/dist/images/guitares/skateboard/nut-one/nut-one.jpg"
+    Description:  "Un vieux skate <br>+&nbsp;un vieux manche <br>=&nbsp;un prototype exceptionnel&nbsp;!"
+    AddDescription: "Nut One est la toute première guitare skateboard sortie de notre établi."
+    Price:        "Seulement<br><strong class='lead'>299</strong>€"
+    InfoTitle:    "Découvrir"
+    InfoUrl:      "/guitares/skateboard/nut-one.html"
+    BuyTitle:     "Acheter"
+    BuyUrl:       "/contact/nut-one.html"
+
+  ### Fred's skate ###
+  - Name:         "Fred's skate"
+    Title:        "Fred's skate"
+    Image:        "/dist/images/guitares/skateboard/fred-skate/fred-skate.jpg"
+    Description:  "Le vieux skate et la pompe de Fred ont trouvé une 2<sup>nde</sup> utilité."
+    AddDescription: "Ensemble, ils envoient du pâté dans ton ampli&nbsp;!"
+    Price:        "Seulement<br><strong class='lead'>399</strong>€"
+    InfoTitle:    "Découvrir"
+    InfoUrl:      "/guitares/skateboard/fred-skate.html"
+    BuyTitle:     "Acheter"
+    BuyUrl:       "/contact/fred-skate.html"
+
+  ### White spirit ###
+  - Name:         "White spirit"
+    Title:        "White spirit"
+    Image:        "/dist/images/guitares/skateboard/nutmeg-skateboard.jpg"
+    Description:  "Un son décapant pour cette guitare skateboard aux abords tranchants."
+    AddDescription: "Viens déboucher les oreilles de tes voisins."
+    Price:        
+    InfoTitle:    "Bientôt"
+    InfoUrl:      
+    BuyTitle:     
+    BuyUrl:       
+
+### Guitares woodblock ###
+- Title:        "Guitares woodblock"
+  Image:        "/dist/images/guitares/woodblock/nutmeg-woodblock.jpg"
+  Description:  "On fabrique des guitares à partir de chutes de bois recyclé."
+  AddDescription: ""
+  Price:        "À partir de<br><strong class='lead'>699</strong>€"
+  InfoTitle:    "Bientôt"
+  InfoUrl:      
+  Guitars:

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="Nutmeg">
+    {% if page.noindex %}
+    <meta name="robots" content="noindex">
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="{{ page.title }}">
+
+    <link rel="icon" href="{{ site.baseurl }}/dist/images/favicon-nutmeg.png">
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/dist/images/touch-nutmeg.png">
+
+    <meta name="og:title"       content="{{ page.twitterTitle }}">
+    <meta name="og:description" content="{{ page.twitterDescription }}" />
+    <meta name="og:image"       content="{{ site.baseurl }}{{ page.twitterImageUrl }}">
+
+    <meta name="twitter:card"        content="{{ page.twitterCard }}">
+    <meta name="twitter:site"        content="@Nutmeg_fr">
+    <meta name="twitter:creator"     content="{{ page.twitterCreator }}">
+    <meta name="twitter:title"       content="{{ page.twitterTitle }}">
+    <meta name="twitter:image"       content="{{ site.baseurl }}{{ page.twitterImageUrl }}">
+    <meta name="twitter:description" content="{{ page.twitterDescription }}" />
+    <meta name="twitter:url"         content="{{ site.baseurl }}{{ page.url }}" />
+    {% if page.twitterData1 %}
+    <meta name="twitter:label1"      content="{{ page.twitterData1 }}">
+    <meta name="twitter:data1"       content="{{ page.twitterLabel1 }}">
+    <meta name="twitter:label2"      content="{{ page.twitterData2 }}">
+    <meta name="twitter:data2"       content="{{ page.twitterLabel2 }}">
+    {% endif %}
+    
+    <link rel="stylesheet" href="{{ site.baseurl }}/dist/css/nutmeg.css">
+    {% if page.js %}
+    <script src="{{ site.baseurl }}/dist/js/effets.js"></script>
+    {% endif %}
+  </head>
+
+  <body>

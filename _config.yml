@@ -22,7 +22,7 @@ unpublished: false
 
 # Plugins
 whitelist: []
-gems:      []
+gems: []
 
 # Conversion
 markdown:    kramdown

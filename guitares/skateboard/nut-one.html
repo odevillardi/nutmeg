@@ -1,0 +1,112 @@
+---
+title: "Nut One · Guitare skateboard · Nutmeg"
+description: ""
+
+js:
+noindex:
+
+menu: 1
+activeGuitares: 1
+activeEffets:
+activeContact:
+
+twitterCard:        "summary"
+twitterCreator:     "@Nutmeg_fr"
+twitterTitle:       "Nutmeg"
+twitterImageUrl:    "/dist/images/nutmeg.svg"
+twitterDescription: "Guitares et effets"
+twitterData1:
+twitterLabel1:
+twitterData2:
+twitterLabel2:
+---
+
+{% include head.html title=page.title %}
+  {% include header.html menu=1 activeGuitares=1 %}
+
+    <div class="container section">
+
+      <div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
+        <span typeof="v:Breadcrumb">
+          <a href="{{ site.baseurl }}/" rel="v:url" property="v:title">Nutmeg</a>
+          <span rel="v:child" typeof="v:Breadcrumb">
+            <a href="{{ site.baseurl }}{{ site.data.guitares.LinkUrl }}" rel="v:url" property="v:title">{{ site.data.guitares.Titre }}</a>
+            <span rel="v:child" typeof="v:Breadcrumb">
+              <a href="{{ site.baseurl }}{{ site.data.guitares.series[0].InfoUrl }}" rel="v:url" property="v:title">{{ site.data.guitares.series[0].Title }}</a>
+            </span>
+          </span>
+        </span>
+      </div>
+
+{% capture BuyUrl %} {{ site.data.boutons.acheter.url }} {% endcapture%}
+{% capture BuyTitle %} {{ site.data.boutons.acheter.name }} {% endcapture%}
+
+      <a class="button button-primary first-button u-pull-right" href="{{ site.data.guitares.series[0].Guitars[0].BuyUrl }}">{{ site.data.guitares.series[0].Guitars[0].BuyTitle }}</a>
+      <h1>{{ site.data.guitares.series[0].Guitars[0].Title }}</h1>
+    </div>
+
+    <div class="row">
+      <img class="u-full-width" src="{{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[0].Image }}" alt="{{ site.data.guitares.series[0].Guitars[0].Title | strip_html }}">
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <p class="lead">
+        {{ site.data.guitares.series[0].Guitars[0].Description | strip_html }}
+        <br>
+        {{ site.data.guitares.series[0].Guitars[0].AddDescription }}
+        </p>
+      </div>
+      <h2>Fabriquée à la main</h2>
+      <div class="row flex-row">
+        <div class="six columns cover-container">
+          <img class="u-max-full-width cover" src="{{ site.baseurl }}/dist/images/guitares/skateboard/nut-one/artisanat.jpg">
+        </div>
+        <div class="six columns">
+          <p class="lead">
+            Toutes les guitares Nutmeg sont uniques et fabriquées à la main.
+            <br>La Nut One ne déroge pas à la règle et a même été la toute première guitare à sortir de notre établi.
+            <br>Les finitions sont rugueuses pour mieux coller au son de notre 1<sup>er</sup> prototype.
+          </p>
+        </div>
+      </div>
+      <h2>Matériel recyclé</h2>
+      <div class="row flex-row reverse">
+        <div class="six columns">
+          <p class="lead">
+            Le skateboard vient de chez Nozbone qui récupère et donne ensuite généreusement des planches en plus ou moins bon état&nbsp;!
+            <br>Le manche est une 2<sup>nde</sup> main rendue vintage par un bon coup de ponçage.
+            <br>Le micro est un humbucker type Gibson, positionné au chevalet&nbsp;; la combinaison donne un son puissant mais crunchy.
+            <br>L’accastillage est aussi issu du recyclage mais est en parfait état.
+          </p>
+        </div>
+        <div class="six columns cover-container">
+          <img class="u-max-full-width cover" src="{{ site.baseurl }}/dist/images/guitares/skateboard/nut-one/materiel.jpg">
+        </div>
+      </div>
+      <h2>L’essayer, c’est l’adopter</h2>
+      <div class="row flex-row">
+        <div class="six columns cover-container">
+          <img class="u-max-full-width cover" src="{{ site.baseurl }}/dist/images/guitares/skateboard/nut-one/essai.jpg">
+        </div>
+        <div class="six columns">
+          <p class="lead">
+            Un manche, un micro, un potard&nbsp;: aucune hésitation, la simplicité est au rendez-vous.
+            <br>N’hésite pas à nous contacter pour l’essayer.
+          </p>
+          <p class="price text-center">
+            {{ site.data.guitares.series[0].Guitars[0].Price }}
+          </p>
+          <a class="button button-primary u-full-width" href="{{ site.data.guitares.series[0].Guitars[0].BuyUrl }}">{{ site.data.guitares.series[0].Guitars[0].BuyTitle }}</a>
+        </div>
+      </div>
+    </div>
+    <div class="last-section">
+      <img class="u-full-width" src="{{ site.baseurl }}/dist/images/guitares/skateboard/nut-one/board.jpg" alt="{{ site.data.guitares.series[0].Guitars[0].Title | strip_html }}">
+      <div class="container">
+        <p class="mention">La planche originale telle que vous pouvez la trouver chez <a href="https://5boronyc.myshopify.com/collections/5b-decks/products/letterpress-logo-red">5BORO</a> et généreusement donnée complètement destroy par <a href="http://www.nozbone.com/">Nozbone</a>.</p>
+      </div>
+    </div>
+
+  {% include footer.html %}
+{% include foot.html %}

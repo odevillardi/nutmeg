@@ -4,10 +4,10 @@
   <h{{ include.titleLevel }}>{{ include.title }}</h{{ include.titleLevel }}>
     {% endif %}
     {% if include.description != "" %}
-  <p>{{ include.description }}</p>          
+  <p class="lead">{{ include.description }}</p>          
     {% endif %}
     {% if include.linkUrl != "" %}
-  <span class="button button{{ include.buttonPrimary }}">{{ include.linkTitle }}</span>
+  <span class="button button-primary">{{ include.linkTitle }}</span>
     {% endif %}
   {% if include.linkUrl != "" %}</a>{% endif %}
 </div>

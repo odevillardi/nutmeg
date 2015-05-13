@@ -1,0 +1,20 @@
+### Boutons ###
+contactLong:
+  name: "Nous contacter"
+  url: "/contact/"
+
+contactCourt:
+  name: "Contact"
+  url: "/contact/"
+
+commander:
+  name: "Commander"
+  url: "/contact/"
+
+acheter:
+  name: "Acheter"
+  url: "/contact/"
+
+essayer:
+  name: "Essayer"
+  url: "/contact/essai.html"

@@ -1,147 +1,18 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ include.title }}</title>
-    <meta name="description" content="">
-    <meta name="author" content="Olivier de Villardi">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-    <link rel="icon"                      href="{{ site.baseurl }}/images/touch-nutmeg.png" />
-    <link rel="apple-touch-icon"          href="{{ site.baseurl }}/images/touch-nutmeg.png"/>
-    <link rel="apple-touch-startup-image" href="{{ site.baseurl }}/images/touch-nutmeg.png" />
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="{{ include.title }}">
-
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Rammetto+One" type="text/css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/dist/normalize.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/dist/skeleton.css">
-    <link rel="stylesheet" href="{{ site.baseurl }}/dist/nutmeg.css">
-
-    {% if include.js %} 
-      <!-- Effects scripts -->   
-      <ascript src="http://cwilso.github.io/AudioContext-MonkeyPatch/AudioContextMonkeyPatch.js"></ascript>
-
-      <!-- Visualizer stuff -->
-      <script src="js/visualizer/events.js"></script>
-
-      <!-- WebGL stuff -->
-      <script src="{{ site.baseurl }}/dist/js/visualizer/base.js"></script>
-      <script src="{{ site.baseurl }}/dist/js/visualizer/cameracontroller.js"></script>
-
-      <!-- TODO(kbr): remove this dependency -->
-      <script src="{{ site.baseurl }}/dist/js/visualizer/matrix4x4.js"></script>
-
-      <!-- Visualizer GL library -->
-      <script src="{{ site.baseurl }}/dist/js/visualizer/visualizer.js"></script>
-      <script src="{{ site.baseurl }}/dist/js/visualizer/shader.js"></script>
-
-      <script src="{{ site.baseurl }}/dist/js/effect.js"></script>
-      <script src="{{ site.baseurl }}/dist/js/waveshaper.js"></script>
-      <script src="{{ site.baseurl }}/dist/js/jungle.js"></script>
-      <script src="{{ site.baseurl }}/dist/js/effects.js"></script>
-      <script src="{{ site.baseurl }}/dist/js/pingpong.js"></script>
-
-      <!-- Knob scripts -->
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-      <script src="{{ site.baseurl }}/dist/js/jquery.knob.min.js"></script>
-      <script>
-        $(function($) {
-          $(".knob").knob({
-            change : function (value) {
-              //console.log("change : " + value);
-              },
-              release : function (value) {
-                //console.log(this.$.attr('value'));
-                console.log("release : " + value);
-              },
-              cancel : function () {
-                console.log("cancel : ", this);
-              },
-              /*format : function (value) {
-                return value + '%';
-              },*/
-              draw : function () {
-                // "tron" case
-                if(this.$.data('skin') == 'tron') {
-
-                  this.cursorExt = 0.3;
-
-                  var a = this.arc(this.cv)  // Arc
-                  , pa                   // Previous arc
-                  , r = 1;
-
-                  this.g.lineWidth = this.lineWidth;
-
-                  if (this.o.displayPrevious) {
-                    pa = this.arc(this.v);
-                    this.g.beginPath();
-                    this.g.strokeStyle = this.pColor;
-                    this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, pa.s, pa.e, pa.d);
-                    this.g.stroke();
-                  }
-
-                this.g.beginPath();
-                this.g.strokeStyle = r ? this.o.fgColor : this.fgColor ;
-                this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, a.s, a.e, a.d);
-                this.g.stroke();
-
-                this.g.lineWidth = 2;
-                this.g.beginPath();
-                this.g.strokeStyle = this.o.fgColor;
-                this.g.arc( this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
-                this.g.stroke();
-
-                return false;
-              }
-            }
-          });
-
-        // Example of infinite knob, iPod click wheel
-        var v, up=0,down=0,i=0
-            ,$idir = $("div.idir")
-            ,$ival = $("div.ival")
-            ,incr = function() { i++; $idir.show().html("+").fadeOut(); $ival.html(i); }
-            ,decr = function() { i--; $idir.show().html("-").fadeOut(); $ival.html(i); };
-        $("input.infinite").knob(
-          {
-          min : 0
-          , max : 20
-          , stopper : false
-          , change : function () {
-            if(v > this.cv){
-              if(up){
-                decr();
-                up=0;
-              }else{up=1;down=0;}
-                } else {
-                  if(v < this.cv){
-                    if(down){
-                      incr();
-                      down=0;
-                    }else{down=1;up=0;}
-                  }
-                }
-              v = this.cv;
-            }
-          });
-        });
-      </script>
-    {% endif %}
-  </head>
-
-  <body>
-    <header>
-      <div class="header">
-        <a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/nutmeg-carre.svg" alt="NUTMEG"></a>
-      </div>
-      <div class="play">
-        {% if include.save %}
-          <a class="button" href="#">Save</a>
-        {% else %}
-          <a class="button" href="{{ site.baseurl }}/fx/">Fx</a>
-        {% endif %}
-      </div>
-    </header>
+<header id="menu">
+  <div class="header">
+    <a href="{{ site.baseurl }}/">
+      <img class="logo" src="{{ site.baseurl }}/dist/images/nutmeg.svg" alt="Logo Nutmeg">
+    </a>
+  </div>
+  {% if page.menu %}
+    <div class="menu">
+      <a class="button black" href="#menu" title="Afficher le menu">Menu</a>
+      <ul class="inline-list">
+        <li><a href="{{ site.baseurl }}/guitares/"{% if page.activeGuitares %} class="active"{% endif %}>Guitares</a></li>
+        <li><a href="{{ site.baseurl }}/effets/"{% if page.activeEffets %} class="active"{% endif %}>Effets</a></li>
+        <li><a href="{{ site.baseurl }}/contact/"{% if page.activeContact %} class="active"{% endif %}>Contact</a></li>
+      </ul>
+      <a href="#" class="close lead" title="Fermer le menu">&times;</a>
+    </div>
+  {% endif %}
+</header>
