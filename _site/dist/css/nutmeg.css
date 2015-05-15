@@ -8,19 +8,26 @@
 html {
   background-color: #ffffff; }
 
+/* Typo */
 body {
   color: #1E1E1E;
   font-family: "Lato", "Raleway", "HelveticaNeue", "Helvetica Neue", Helevtica, sans-serif;
+  font-size: 1.6rem;
   font-weight: 300;
   -webkit-font-variant-ligatures: common-ligatures;
   font-variant-ligatures: common-ligatures; }
 
-/* Typo */
-strong {
-  font-weight: 700; }
-
 .lead {
   font-size: 2rem; }
+
+@media (min-width: 750px) {
+  body {
+    font-size: 1.8rem; }
+
+  .lead {
+    font-size: 2.4rem; } }
+strong {
+  font-weight: 700; }
 
 .text-center {
   text-align: center; }
@@ -35,12 +42,6 @@ strong {
   font-style: italic;
   color: #444444; }
 
-@media (min-width: 750px) {
-  body {
-    font-size: 1.8rem; }
-
-  .lead {
-    font-size: 2.4rem; } }
 /* Hx */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Ovo", Palatino, serif; }
