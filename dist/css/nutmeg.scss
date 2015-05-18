@@ -406,7 +406,7 @@ footer {
       transition:         all 0.25s ease;
 
     &:hover, &:focus {
-      margin-left: -11.25rem;
+      margin-left: -11.25rem; /* (15 + 7,5) / 2 */
       clip: rect(0px, 15rem, 5rem, 7.5rem);
     }
   }
@@ -439,7 +439,7 @@ footer {
   .thanks {
     height: 13rem;
     margin-top: -15rem;
-    padding: 2rem 0 0 0;
+    padding: 1.9rem 0 0 0;
   }
 }
 
