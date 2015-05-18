@@ -17,15 +17,15 @@ $main-link-color:     #0064C8;
 $second-link-color:   #007A4F;
 $disabled-link-color: #B7B7B7;
 
-$nutmeg-color:      $main-link-color;
-$clover-color:      teal;
-$oliver-color:      orangered;
-$zelda-color:       SaddleBrown;
-$tara-color:        goldenrod;
-$piggely-color:     deeppink;
-$wiggely-color:     dodgerblue;
-$pigasus-color:     rebeccapurple;
-$shaolin-color:     black;
+$nutmeg-color:  $main-link-color;
+$clover-color:  teal;
+$oliver-color:  orangered;
+$zelda-color:   SaddleBrown;
+$tara-color:    goldenrod;
+$piggely-color: deeppink;
+$wiggely-color: dodgerblue;
+$pigasus-color: rebeccapurple;
+$shaolin-color: black;
 
 /* Nutmeg CSS */
 html { background-color: $main-background; }
@@ -61,6 +61,7 @@ strong { font-weight: 700; }
 /* Hx */
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-serif;
+  font-weight: 400;
 
   small { color: lighten($main-color, 15%); }
 }
@@ -180,7 +181,7 @@ input[type="button"] {
   height: 4rem;
   padding: 0 1.5rem;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 3.8rem;
   text-transform: none;
   font-variant: small-caps;
@@ -444,7 +445,7 @@ footer {
 
 /* Bazinga */
 .bazinga {
-  background: $main-color no-repeat center;
+  background: $main-background no-repeat center;
   background-size: cover;
   padding: 7rem 0;
 
@@ -468,8 +469,8 @@ footer {
   .button { margin-bottom: 0; }
 }
 
-.guitares  { background-image: url("{{ site.baseurl }}/dist/images/guitares/nutmeg-guitares-1080.jpg"); }
-.effets    { background-image: url("{{ site.baseurl }}/dist/images/effets/nutmeg-effets-1080.jpg"); }
+.guitares { background-image: url("{{ site.baseurl }}/dist/images/guitares/nutmeg-guitares-1080.jpg"); }
+.effets   { background-image: url("{{ site.baseurl }}/dist/images/effets/nutmeg-effets-1080.jpg"); }
 
 @media (min-width: 750px) {
   .bazinga .column:last-child:not(:only-child),
@@ -480,6 +481,7 @@ footer {
 
 @media (min-width: 1000px) {
   .bazinga, .bazinga .row, .bazinga .flex-row { margin-bottom: 0; }
+  .bazinga { padding: 10rem 0; }
   .first-bazinga { padding-top: 15rem; }
   .last-bazinga  { padding-bottom: 15rem ; }
 }

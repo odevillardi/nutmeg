@@ -44,7 +44,8 @@ strong {
 
 /* Hx */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Ovo", Palatino, serif; }
+  font-family: "Ovo", Palatino, serif;
+  font-weight: 400; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     color: #444444; }
 
@@ -152,7 +153,7 @@ input[type="button"] {
   height: 4rem;
   padding: 0 1.5rem;
   font-size: 1.6rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 3.8rem;
   text-transform: none;
   font-variant: small-caps;
@@ -407,7 +408,7 @@ footer {
     padding: 2rem 0 0 0; } }
 /* Bazinga */
 .bazinga {
-  background: #1E1E1E no-repeat center;
+  background: #ffffff no-repeat center;
   background-size: cover;
   padding: 7rem 0; }
   .bazinga a {
@@ -439,6 +440,9 @@ footer {
 @media (min-width: 1000px) {
   .bazinga, .bazinga .row, .bazinga .flex-row {
     margin-bottom: 0; }
+
+  .bazinga {
+    padding: 10rem 0; }
 
   .first-bazinga {
     padding-top: 15rem; }
