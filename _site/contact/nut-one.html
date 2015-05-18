@@ -2,16 +2,14 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Contact : merci pour ton message · Nutmeg</title>
+    <title>Essayer · Nutmeg</title>
     <meta name="description" content="">
     <meta name="author" content="Nutmeg">
-    <link rel="canonical" href="http://nutmeg.fr/contact/merci.html">
-    
-    <meta name="robots" content="noindex">
+    <link rel="canonical" href="http://nutmeg.fr/contact/nut-one.html">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Contact : merci pour ton message · Nutmeg">
+    <meta name="apple-mobile-web-app-title" content="Essayer · Nutmeg">
 
     <link rel="icon" href="/dist/images/favicon-nutmeg.png">
     <link rel="apple-touch-icon" href="/dist/images/touch-nutmeg.png">
@@ -26,7 +24,7 @@
     <meta name="twitter:title"       content="Nutmeg">
     <meta name="twitter:image"       content="/dist/images/nutmeg.svg">
     <meta name="twitter:description" content="Guitares et effets" />
-    <meta name="twitter:url"         content="/contact/merci.html" />
+    <meta name="twitter:url"         content="/contact/nut-one.html" />
     
     
     <link rel="stylesheet" href="/dist/css/nutmeg.css">
@@ -53,13 +51,56 @@
   
 </header>
 
-    <div class="container section nocrumbs last-section">
-      <h1>Merci pour ton message</h1>
-      <p class="lead">
-        Nous y répondrons promptement.
-        <br>En attendant, tu peux regarder cette vidéo&nbsp;:
+    <div class="container section last-section">
+
+      <div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
+        <span typeof="v:Breadcrumb">
+          <a href="/" rel="v:url" property="v:title">Nutmeg</a>
+          <span rel="v:child" typeof="v:Breadcrumb">
+            <a href="/guitares/" rel="v:url" property="v:title">Guitares</a>
+            <span rel="v:child" typeof="v:Breadcrumb">
+              <a href="/guitares/skateboard/" rel="v:url" property="v:title">Guitares skateboard</a>
+              <span rel="v:child" typeof="v:Breadcrumb">
+                <a href="/guitares/skateboard/nut-one.html" rel="v:url" property="v:title">Nut One</a>
+              </span>
+            </span>
+          </span>
+        </span>
+      </div>
+
+      <h1>Essayer Nut One</h1>
+      <p>
+        On s’est dit que t’aurais peut-être envie de faire un essai avant d’acheter la Nutmeg Nut One.
       </p>
-      <iframe width="800" height="600" class="u-full-width" src="https://www.youtube.com/embed/v-ObUg_n4A0" allowfullscreen></iframe>
+      <p>
+       Pour faire un essai, contacte-nous&nbsp;:
+      </p>
+      <ul>
+        <li>via notre Twitter <a href="//twitter.com/Nutmeg_fr">@Nutmeg_fr</a>&nbsp;;</li>
+        <li>via le formulaire <a href="#formulaire">ci-dessous</a>&nbsp;;</li>
+      </ul>
+      <p>
+        et on organise ça.
+      </p>
+      <p>
+        À très vite&nbsp;!
+      </p>
+      <h2 id="formulaire">Formulaire</h2>
+        <div class="row">
+        <form class="formulaire" action="https://getsimpleform.com/messages?form_api_token=66472dc236aa9c01a6e561a249236e2d" method="post">
+          <input type='hidden' name='redirect_to' value='http://127.0.0.1:4000/contact/merci.html'>
+          <label for="email">Adresse email <small>(Pour te répondre. Uniquement.)</small></label>
+          <input class="u-full-width" id="email" placeholder="ton_email@mailbox.com" name="email" type="email" required="required">
+          <label for="objet">Objet</label>
+          <select class="u-full-width" id="objet" name="objet" required="required">
+            <option value="Essayer la Nutmeg Nut One">Essayer la Nutmeg Nut One</option>
+          </select>
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Salut…" class="u-full-width" name="message" required="required"></textarea>
+          <button class="button button-primary u-full-width" type="submit">Envoyer</button>
+        </form>
+        <p class="mention">(Formulaire garanti sans SPAM et sans <acronym title="Organisme Génétiquement Modifié">OGM</acronym>)</p>
+      </div>
     </div>
 
   <footer>
@@ -80,7 +121,7 @@
 </footer>
     <script>
       if (window.location.href.indexOf('http://odevillardi.github.io') === 0) {
-        window.location.href = 'http://nutmeg.fr/contact/merci.html';
+        window.location.href = 'http://nutmeg.fr/contact/nut-one.html';
       }
     </script>
     <script type="application/ld+json">
