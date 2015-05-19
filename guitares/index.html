@@ -39,6 +39,13 @@ twitterLabel2:
         {{ site.data.guitares.AddDescription }}
       </p>
 
+      <div id="catalogue" class="row">
+        {% for serie in site.data.guitares.series %}
+          {% capture thisTitle %} {{ serie.Title | remove:'Guitares ' }} {% endcapture %}
+          {% include serie.html title=thisTitle image=serie.Image description=serie.Description infoTitle=serie.InfoTitle infoUrl=serie.InfoUrl offset=serie.Offset price=serie.Price %}
+        {% endfor %}
+      </div>
+
       <div class="row">
         <div class="four columns">
           <h3>Design</h3>
@@ -55,12 +62,6 @@ twitterLabel2:
           <p>Une envie très personnelle&nbsp;? Fournis-nous les matériaux que tu veux recycler, décris-nous ton projet. On s’occupe du reste.</p>
           <a class="button u-full-width" href="{{ site.baseurl }}{{ site.data.boutons.contactLong.url }}">{{ site.data.boutons.contactLong.name }}</a>
         </div>
-      </div>
-
-      <div id="catalogue">
-        {% for serie in site.data.guitares.series %}
-          {% include section-product.html title=serie.Title image=serie.Image description=serie.Description infoTitle=serie.InfoTitle infoUrl=serie.InfoUrl offset=serie.Offset price=serie.Price %}
-        {% endfor %}
       </div>
     </div>
 

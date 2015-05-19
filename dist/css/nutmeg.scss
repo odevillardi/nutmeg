@@ -85,6 +85,7 @@ a {
   &:hover, &:focus {
     color: lighten($main-link-color, 15%);
     text-decoration: none;
+    cursor: pointer;
 
     img:not(.logo) {
       border-color: currentColor;
@@ -227,7 +228,7 @@ input[type="button"].button-primary {
   }
 }
 
-.button.disabled {
+.button.disabled, a.disabled {
   color: $disabled-link-color;
   background-color: $main-background;
   cursor: not-allowed;

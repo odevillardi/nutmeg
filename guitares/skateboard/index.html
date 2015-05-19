@@ -44,7 +44,7 @@ twitterLabel2:
       </p>
 
       {% for guitar in site.data.guitares.series[0].Guitars %}
-        {% include section-product.html title=guitar.Title image=guitar.Image description=guitar.Description infoTitle=guitar.InfoTitle infoUrl=guitar.InfoUrl price=guitar.Price buyTitle=guitar.BuyTitle buyUrl=guitar.BuyUrl %}
+        {% include product.html title=guitar.Title image=guitar.Image description=guitar.Description infoTitle=guitar.InfoTitle infoUrl=guitar.InfoUrl price=guitar.Price buyTitle=guitar.BuyTitle buyUrl=guitar.BuyUrl %}
       {% endfor %}
 
       <div class="lead">

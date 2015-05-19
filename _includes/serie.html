@@ -1,17 +1,18 @@
-<h2>{{ include.title }}</h2>
-<div class="row flex-row">
+<div class="six columns">
+  <h2>{{ include.title }}</h2>
   {% if include.image %}
-    <div class="seven columns cover-container">
-    {% if include.infoUrl %}
-      <a href="{{ site.baseurl }}{{ include.infoUrl }}">
-    {% endif %}
-        <img class="u-max-full-width cover" src="{{ site.baseurl }}{{ include.image }}" alt="{{ include.infoTitle }} {{ include.title | strip_html }}">
-    {% if include.infoUrl %}
-      </a>
-    {% endif %}
-    </div>
+    <a{% if include.infoUrl %} href="{{ site.baseurl }}{{ include.infoUrl }}"{% else %} class="disabled"{% endif %}>
+      <img class="u-max-full-width"
+           alt="{{ include.infoTitle | strip_html }} les Guitares {{ include.title | strip_html }}"
+           srcset="{{ site.baseurl }}{{ include.image }}-1280.jpg 1280w,
+           {{ site.baseurl }}{{ include.image }}-920.jpg 920w,
+           {{ site.baseurl }}{{ include.image }}-640.jpg 640w"
+           sizes="(min-width: 750px) 48vw,
+           100vw"
+           src="{{ site.baseurl }}{{ include.image }}-640.jpg">
+    </a>
   {% endif %}
-  <div class="five columns text-center">
+  <div class="text-center">
     <p class="lead">{{ include.description }}</p>
     {% if include.buyUrl %}
       {% if include.infoUrl %}

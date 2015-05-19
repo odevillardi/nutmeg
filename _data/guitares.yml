@@ -9,8 +9,8 @@ LinkUrl:        "/guitares/"
 series:
 
 ### Guitares skateboard ###
-- Title:        "Guitares skateboard"
-  Image:        "/dist/images/guitares/skateboard/nutmeg-skateboard.jpg"
+- Title:        "Guitares Skateboard"
+  Image:        "/dist/images/guitares/skateboard/nutmeg-skateboard"
   Description:  "On recycle des vieux skateboards usés pour les transformer en guitares."
   AddDescription: "Un design freestyle et un son crunchy, le tout recyclé et personnalisable pour des guitares uniques."
   Price:        "À partir de<br><strong class='lead'>299</strong>€"
@@ -22,7 +22,7 @@ series:
   ### Nut One ###
   - Name:         "Nut One"
     Title:        "Nut One"
-    Image:        "/dist/images/guitares/skateboard/nut-one/nut-one.jpg"
+    Image:        "/dist/images/guitares/skateboard/nut-one/nut-one"
     Description:  "Un vieux skate <br>+&nbsp;un vieux manche <br>=&nbsp;un prototype exceptionnel&nbsp;!"
     AddDescription: "Nut One est la toute première guitare skateboard sortie de notre établi."
     Price:        "Seulement<br><strong class='lead'>299</strong>€"
@@ -34,7 +34,7 @@ series:
   ### Fred's skate ###
   - Name:         "Fred's skate"
     Title:        "Fred's skate"
-    Image:        "/dist/images/guitares/skateboard/fred-skate/fred-skate.jpg"
+    Image:        "/dist/images/guitares/skateboard/fred-skate/fred-skate"
     Description:  "Le vieux skate et la pompe de Fred ont trouvé une 2<sup>nde</sup> utilité."
     AddDescription: "Ensemble, ils envoient du pâté dans ton ampli&nbsp;!"
     Price:        "Seulement<br><strong class='lead'>399</strong>€"
@@ -46,21 +46,21 @@ series:
   ### White spirit ###
   - Name:         "White spirit"
     Title:        "White spirit"
-    Image:        "/dist/images/guitares/skateboard/nutmeg-skateboard.jpg"
+    Image:        "/dist/images/guitares/skateboard/white-spirit/white-spirit"
     Description:  "Un son décapant pour cette guitare skateboard aux abords tranchants."
     AddDescription: "Viens déboucher les oreilles de tes voisins."
     Price:        
-    InfoTitle:    "Bientôt"
+    InfoTitle:    "Découvrez bientôt"
     InfoUrl:      
     BuyTitle:     
     BuyUrl:       
 
 ### Guitares woodblock ###
-- Title:        "Guitares woodblock"
-  Image:        "/dist/images/guitares/woodblock/nutmeg-woodblock.jpg"
+- Title:        "Guitares Woodblock"
+  Image:        "/dist/images/guitares/woodblock/nutmeg-woodblock"
   Description:  "On fabrique des guitares à partir de chutes de bois recyclé."
   AddDescription: ""
   Price:        "À partir de<br><strong class='lead'>699</strong>€"
-  InfoTitle:    "Bientôt"
+  InfoTitle:    "Découvrez bientôt"
   InfoUrl:      
   Guitars:

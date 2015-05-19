@@ -46,7 +46,16 @@ twitterLabel2:
     </div>
 
     <div class="row">
-      <img class="u-full-width" src="{{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}" alt="Photo de {{ site.data.guitares.series[0].Guitars[1].Title | strip_html }}">
+      <img class="u-full-width"
+           alt="Photo de {{ site.data.guitares.series[0].Guitars[1].Title | strip_html }}"
+           srcset="{{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-2880.jpg 2880w,
+           {{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-2000.jpg 2000w,
+           {{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-1500.jpg 1500w,
+           {{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-1280.jpg 1280w,
+           {{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-750.jpg 750w,
+           {{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-640.jpg 640w"
+           sizes="100vw"
+           src="{{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-640.jpg">
     </div>
 
     <div class="container last-section">

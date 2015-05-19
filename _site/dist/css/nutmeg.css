@@ -75,7 +75,8 @@ a {
     border: 1px solid #B7B7B7; }
   a:hover, a:focus {
     color: #168aff;
-    text-decoration: none; }
+    text-decoration: none;
+    cursor: pointer; }
     a:hover img:not(.logo), a:focus img:not(.logo) {
       border-color: currentColor; }
   a:active {
@@ -214,16 +215,16 @@ input[type="button"].button-primary {
     background-color: #168aff;
     border-color: #0064C8; }
 
-.button.disabled {
+.button.disabled, a.disabled {
   color: #B7B7B7;
   background-color: #ffffff;
   cursor: not-allowed;
   text-shadow: none; }
-  .button.disabled:hover, .button.disabled:focus {
+  .button.disabled:hover, .button.disabled:focus, a.disabled:hover, a.disabled:focus {
     color: #B7B7B7;
     background-color: #ffffff;
     border-color: currentColor; }
-  .button.disabled:active {
+  .button.disabled:active, a.disabled:active {
     padding-top: 0;
     box-shadow: none; }
 

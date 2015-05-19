@@ -20,7 +20,7 @@ title: "Pédales · Nutmeg"
         {{ site.data.pedales.AddDescription }}
       </p>
       {% for serie in site.data.pedales.pedals %}
-        {% include section-product.html title=serie.Title image=serie.Image description=serie.Description buyTitle=serie.BuyTitle buyUrl=serie.BuyUrl infoTitle=serie.InfoTitle infoUrl=serie.InfoUrl offset=serie.Offset price=serie.Price %}
+        {% include product.html title=serie.Title image=serie.Image description=serie.Description buyTitle=serie.BuyTitle buyUrl=serie.BuyUrl infoTitle=serie.InfoTitle infoUrl=serie.InfoUrl offset=serie.Offset price=serie.Price %}
       {% endfor %}
     </div>
 
