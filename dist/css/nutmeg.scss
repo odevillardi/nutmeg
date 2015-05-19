@@ -469,6 +469,8 @@ footer {
   .button { margin-bottom: 0; }
 }
 
+.last-bazinga { border-bottom: none; }
+
 .guitares { background-image: url("{{ site.baseurl }}/dist/images/guitares/nutmeg-guitares-750.jpg"); }
 .effets   { background-image: url("{{ site.baseurl }}/dist/images/effets/nutmeg-effets-750.jpg"); }
 
@@ -483,6 +485,9 @@ footer {
     margin-top: 0;
   }
 
+  .guitares { background-image: url("{{ site.baseurl }}/dist/images/guitares/nutmeg-guitares-1000.jpg"); }
+  .effets   { background-image: url("{{ site.baseurl }}/dist/images/effets/nutmeg-effets-1000.jpg"); }
+
   @media (min-resolution: 200dpi) {
     .guitares { background-image: url("{{ site.baseurl }}/dist/images/guitares/nutmeg-guitares-2000.jpg"); }
     .effets   { background-image: url("{{ site.baseurl }}/dist/images/effets/nutmeg-effets-2000.jpg"); }
@@ -495,8 +500,8 @@ footer {
   .first-bazinga { padding-top: 15rem; }
   .last-bazinga  { padding-bottom: 15rem ; }
 
-  .guitares { background-image: url("{{ site.baseurl }}/dist/images/guitares/nutmeg-guitares-2000.jpg"); }
-  .effets   { background-image: url("{{ site.baseurl }}/dist/images/effets/nutmeg-effets-2000.jpg"); }
+  .guitares { background-image: url("{{ site.baseurl }}/dist/images/guitares/nutmeg-guitares-1500.jpg"); }
+  .effets   { background-image: url("{{ site.baseurl }}/dist/images/effets/nutmeg-effets-1500.jpg"); }
   
   @media (min-resolution: 200dpi) {
     .guitares { background-image: url("{{ site.baseurl }}/dist/images/guitares/nutmeg-guitares-2880.jpg"); }
@@ -544,7 +549,6 @@ footer {
 .discover {
   background-color: $main-color;
   color: $main-background;
-  margin-top: 2rem;
   padding-top: 2rem;
 }
 
