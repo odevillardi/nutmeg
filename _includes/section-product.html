@@ -5,7 +5,7 @@
     {% if include.infoUrl %}
       <a href="{{ site.baseurl }}{{ include.infoUrl }}">
     {% endif %}
-        <img class="u-max-full-width cover" src="{{ site.baseurl }}{{ include.image }}" alt="{{ include.title | strip_html }}">
+        <img class="u-max-full-width cover" src="{{ site.baseurl }}{{ include.image }}" alt="{{ include.infoTitle }} {{ include.title | strip_html }}">
     {% if include.infoUrl %}
       </a>
     {% endif %}
