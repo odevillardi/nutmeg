@@ -307,7 +307,7 @@ header {
     #menu:target .menu a:hover:not(.close), #menu:target .menu a:focus:not(.close) {
       text-decoration: underline; }
   #menu:target .menu a.active {
-    border-bottom: 2px solid #1E1E1E; }
+    border-bottom: 2px solid currentColor; }
 
 @media (max-width: 330px) {
   #menu:target .header .logo {
@@ -429,15 +429,27 @@ footer {
     margin-bottom: 0; }
 
 .guitares {
-  background-image: url("/dist/images/guitares/nutmeg-guitares-1080.jpg"); }
+  background-image: url("/dist/images/guitares/nutmeg-guitares-750.jpg"); }
 
 .effets {
-  background-image: url("/dist/images/effets/nutmeg-effets-1080.jpg"); }
+  background-image: url("/dist/images/effets/nutmeg-effets-750.jpg"); }
 
+@media (min-resolution: 200dpi) {
+  .guitares {
+    background-image: url("/dist/images/guitares/nutmeg-guitares-1500.jpg"); }
+
+  .effets {
+    background-image: url("/dist/images/effets/nutmeg-effets-1500.jpg"); } }
 @media (min-width: 750px) {
   .bazinga .column:last-child:not(:only-child),
   .bazinga .columns:last-child:not(:only-child) {
     margin-top: 0; } }
+@media (min-width: 750px) and (min-resolution: 200dpi) {
+  .guitares {
+    background-image: url("/dist/images/guitares/nutmeg-guitares-2000.jpg"); }
+
+  .effets {
+    background-image: url("/dist/images/effets/nutmeg-effets-2000.jpg"); } }
 @media (min-width: 1000px) {
   .bazinga, .bazinga .row, .bazinga .flex-row {
     margin-bottom: 0; }
@@ -449,7 +461,19 @@ footer {
     padding-top: 15rem; }
 
   .last-bazinga {
-    padding-bottom: 15rem; } }
+    padding-bottom: 15rem; }
+
+  .guitares {
+    background-image: url("/dist/images/guitares/nutmeg-guitares-2000.jpg"); }
+
+  .effets {
+    background-image: url("/dist/images/effets/nutmeg-effets-2000.jpg"); } }
+@media (min-width: 1000px) and (min-resolution: 200dpi) {
+  .guitares {
+    background-image: url("/dist/images/guitares/nutmeg-guitares-2880.jpg"); }
+
+  .effets {
+    background-image: url("/dist/images/effets/nutmeg-effets-2880.jpg"); } }
 /* Sections */
 .section {
   padding-top: 1.5rem;
