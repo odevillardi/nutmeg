@@ -1,6 +1,6 @@
 ---
-title: "Effets · Nutmeg"
-description: "Nos effets numériques pour guitare électriques, à utiliser en ligne, directement dans le navigateur !"
+title: "Pedalboard · Effets · Nutmeg"
+description: "Ton pedalboard en ligne, open source et personnalisable."
 
 js: 1
 noindex:
@@ -12,8 +12,8 @@ activeContact:
 
 twitterCard:        "summary"
 twitterCreator:     "@Nutmeg_fr"
-twitterTitle:       "Les effets pour guitares par Nutmeg"
-twitterDescription: "Nos effets numériques pour guitare électriques, à utiliser en ligne, directement dans le navigateur !"
+twitterTitle:       "Le pedalboard par Nutmeg"
+twitterDescription: "Ton pedalboard en ligne, open source et personnalisable."
 twitterImageUrl:    "/dist/images/nutmeg.svg"
 twitterData1:
 twitterLabel1:
@@ -24,24 +24,23 @@ twitterLabel2:
 {% include head.html %}
 {% include header.html %}
 
-    <div class="container section">
+    <div class="container section last-section">
 
       <div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
         <span typeof="v:Breadcrumb">
           <a href="{{ site.baseurl }}/" rel="v:url" property="v:title">Nutmeg</a>
+          <span rel="v:child" typeof="v:Breadcrumb">
+            <a href="{{ site.baseurl }}{{ site.data.effets.LinkUrl }}" rel="v:url" property="v:title">{{ site.data.effets.Titre }}</a>
+          </span>
         </span>
       </div>
 
-      <h1>{{ site.data.effets.Titre }} <small>(v 0.1)</small></h1>
-      <p class="lead">
-        Attention, à utiliser avec moult précautions :) (<a href="{{ site.baseurl }}/faq/#effets">En savoir plus</a>)
-      </p>
+      <h1>Pedalboard <small>(v 0.1)</small></h1>
       <p>
         Effets activés : <button id="overallEffects" class="button button-primary off" onclick="switchEffet(this,'overall');">A</button>
       </p>
-    </div>
 
-    <div id="controls" class="board container">
+    <div id="controls" class="board">
       <div class="row">
         {% include effet.html name="piggely" title="Piggely's screaming Octaver" effet="octaver" key="O" %}
         {% include effet.html name="zelda"   title="Zelda's fun auto-Wha"        effet="wha"     key="W" %}
@@ -57,18 +56,21 @@ twitterLabel2:
 <!--       <div class="row">
         {% include effets/empty.html %}
       </div> -->
-    </div>
+      </div>
 
-    <div class="discover">
-      <div class="container">
-        <h4>Découvrez aussi nos guitares</h4>
+      <p class="lead">
+        Attention, à utiliser avec moult précautions :) (<a href="{{ site.baseurl }}/faq/#effets">En savoir plus</a>)
+      </p>
+
+      <div class="row flex-row reverse">
+        <div class="three columns cover-container">
+          <a title="[CC BY 3.0 FR (http://creativecommons.org/licenses/by/3.0)]" href="http://creativecommons.org/licenses/by/3.0/fr/"><img class="u-full-width contain" alt="Creative commons logo and wordmark" src="//mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg"/></a>
+        </div>
+        <div class="nine columns">
+          <p>Nos effets sont sous licence <a title="[CC BY 3.0 FR (http://creativecommons.org/licenses/by/3.0)]" href="http://creativecommons.org/licenses/by/3.0/fr/">Creative Commons Attribution 3.0 France (CC BY 3.0 FR)</a>.</p>
+        </div>
       </div>
-    </div>
-      
-    <div class="bazinga guitares last-bazinga">
-      <div class="container">
-        {% include bazinga.html title=site.data.guitares.Titre image=site.data.guitares.Image description=site.data.guitares.Description linkTitle=site.data.guitares.LinkTitle linkUrl=site.data.guitares.LinkUrl offset="" titleLevel="3" %}
-      </div>
+
     </div>
 
 

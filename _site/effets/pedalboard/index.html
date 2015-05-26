@@ -2,29 +2,29 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Effets · Nutmeg</title>
-    <meta name="description" content="Nos effets numériques pour guitare électriques, à utiliser en ligne, directement dans le navigateur !">
+    <title>Pedalboard · Effets · Nutmeg</title>
+    <meta name="description" content="Ton pedalboard en ligne, open source et personnalisable.">
     <meta name="author" content="Nutmeg">
-    <link rel="canonical" href="http://nutmeg.fr/effets/index.html">
+    <link rel="canonical" href="http://nutmeg.fr/effets/pedalboard/index.html">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="Effets · Nutmeg">
+    <meta name="apple-mobile-web-app-title" content="Pedalboard · Effets · Nutmeg">
 
     <link rel="icon" href="/dist/images/favicon-nutmeg.png">
     <link rel="apple-touch-icon" href="/dist/images/touch-nutmeg.png">
 
-    <meta name="og:title"       content="Les effets pour guitares par Nutmeg">
-    <meta name="og:description" content="Nos effets numériques pour guitare électriques, à utiliser en ligne, directement dans le navigateur !" />
+    <meta name="og:title"       content="Le pedalboard par Nutmeg">
+    <meta name="og:description" content="Ton pedalboard en ligne, open source et personnalisable." />
     <meta name="og:image"       content="/dist/images/nutmeg.svg">
 
     <meta name="twitter:card"        content="summary">
     <meta name="twitter:site"        content="@Nutmeg_fr">
     <meta name="twitter:creator"     content="@Nutmeg_fr">
-    <meta name="twitter:title"       content="Les effets pour guitares par Nutmeg">
+    <meta name="twitter:title"       content="Le pedalboard par Nutmeg">
     <meta name="twitter:image"       content="/dist/images/nutmeg.svg">
-    <meta name="twitter:description" content="Nos effets numériques pour guitare électriques, à utiliser en ligne, directement dans le navigateur !" />
-    <meta name="twitter:url"         content="/effets/index.html" />
+    <meta name="twitter:description" content="Ton pedalboard en ligne, open source et personnalisable." />
+    <meta name="twitter:url"         content="/effets/pedalboard/index.html" />
     
     
     <link rel="stylesheet" href="/dist/css/nutmeg.css">
@@ -53,24 +53,23 @@
   
 </header>
 
-    <div class="container section">
+    <div class="container section last-section">
 
       <div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
         <span typeof="v:Breadcrumb">
           <a href="/" rel="v:url" property="v:title">Nutmeg</a>
+          <span rel="v:child" typeof="v:Breadcrumb">
+            <a href="/effets/" rel="v:url" property="v:title">Effets</a>
+          </span>
         </span>
       </div>
 
-      <h1>Effets <small>(v 0.1)</small></h1>
-      <p class="lead">
-        Attention, à utiliser avec moult précautions :) (<a href="/faq/#effets">En savoir plus</a>)
-      </p>
+      <h1>Pedalboard <small>(v 0.1)</small></h1>
       <p>
         Effets activés : <button id="overallEffects" class="button button-primary off" onclick="switchEffet(this,'overall');">A</button>
       </p>
-    </div>
 
-    <div id="controls" class="board container">
+    <div id="controls" class="board">
       <div class="row">
         <div class="three columns pedal on piggely">
   <h5>Piggely's screaming Octaver</h5>
@@ -112,30 +111,21 @@
   <button class="button">+</button>
 </div>
       </div> -->
-    </div>
+      </div>
 
-    <div class="discover">
-      <div class="container">
-        <h4>Découvrez aussi nos guitares</h4>
+      <p class="lead">
+        Attention, à utiliser avec moult précautions :) (<a href="/faq/#effets">En savoir plus</a>)
+      </p>
+
+      <div class="row flex-row reverse">
+        <div class="three columns cover-container">
+          <a title="[CC BY 3.0 FR (http://creativecommons.org/licenses/by/3.0)]" href="http://creativecommons.org/licenses/by/3.0/fr/"><img class="u-full-width contain" alt="Creative commons logo and wordmark" src="//mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg"/></a>
+        </div>
+        <div class="nine columns">
+          <p>Nos effets sont sous licence <a title="[CC BY 3.0 FR (http://creativecommons.org/licenses/by/3.0)]" href="http://creativecommons.org/licenses/by/3.0/fr/">Creative Commons Attribution 3.0 France (CC BY 3.0 FR)</a>.</p>
+        </div>
       </div>
-    </div>
-      
-    <div class="bazinga guitares last-bazinga">
-      <div class="container">
-        <div class="six columns offset-by-">
-  <a href="/guitares/">
-    
-  <h3>Guitares</h3>
-    
-    
-  <p class="lead">Artisanales, <abbr title='Basse technologie'>Low-Tech</abbr>, matériaux recyclées.</p>          
-    
-    
-  <span class="button button-primary">Découvrir nos guitares</span>
-    
-  </a>
-</div>
-      </div>
+
     </div>
 
 
@@ -157,7 +147,7 @@
 </footer>
     <script>
       if (window.location.href.indexOf('http://odevillardi.github.io') === 0) {
-        window.location.href = 'http://nutmeg.fr/effets/index.html';
+        window.location.href = 'http://nutmeg.fr/effets/pedalboard/index.html';
       }
     </script>
     <script type="application/ld+json">

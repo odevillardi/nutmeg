@@ -159,7 +159,7 @@ a {
     .cover-container { 
       position: relative;
 
-      .cover {
+      .cover, .contain {
         position: absolute;
         top: 0;
         left: 0;
@@ -167,6 +167,10 @@ a {
         width: 100%;
         -webkit-object-fit: cover;
                 object-fit: cover;
+      }
+      .contain {
+        -webkit-object-fit: contain;
+                object-fit: contain;
       }
     }
   }
