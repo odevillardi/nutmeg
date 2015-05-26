@@ -192,7 +192,7 @@ if (typeof AudioContext !== "undefined") {
 } else if (typeof webkitAudioContext !== "undefined") {
     context = new webkitAudioContext();
 } else {
-    throw new Error('AudioContext not supported. :(');
+    throw new Error('AudioContext n’est pas supporté. :(');
 }
 
 function hasGetUserMedia() {
@@ -203,7 +203,7 @@ function hasGetUserMedia() {
 if (hasGetUserMedia()) {
   // Good to go!
 } else {
-  alert('getUserMedia() is not supported in your browser');
+  alert('getUserMedia() n’est pas supporté par ton navigateur...');
 }
 
 navigator.getUserMedia  = navigator.getUserMedia ||
@@ -212,7 +212,7 @@ navigator.getUserMedia  = navigator.getUserMedia ||
                           navigator.msGetUserMedia;
 
 var errorCallback = function(e) {
-    console.log('Reeeejected!', e);
+    console.log('Erreur!', e);
   };
 
 navigator.getUserMedia({audio: true}, function(stream) {
