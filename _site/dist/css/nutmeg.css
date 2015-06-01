@@ -117,14 +117,19 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-bottom: 4rem; }
+  flex-wrap: wrap; }
   .flex-row.reverse {
     -ms-flex-wrap: wrap-reverse;
     -webkit-flex-wrap: wrap-reverse;
     flex-wrap: wrap-reverse; }
-  .flex-row .column, .flex-row .columns {
-    margin-bottom: 0; }
+  .flex-row:not(.row) {
+    margin-bottom: 4rem; }
+    .flex-row:not(.row) .column, .flex-row:not(.row) .columns {
+      margin-bottom: 0; }
+  .flex-row::after {
+    content: "";
+    display: table;
+    clear: both; }
 
 @media (min-width: 750px) {
   .row, .flex-row {
@@ -279,6 +284,7 @@ header {
   .header .logo {
     position: absolute;
     height: 4rem;
+    width: 12rem;
     clip: rect(0px, 12rem, 4rem, 0px); }
 
 .menu {
@@ -354,6 +360,7 @@ footer {
 
   .header .logo {
     height: 5rem;
+    width: 15rem;
     clip: rect(0px, 15rem, 5rem, 0px); }
 
   .menu ul {
@@ -549,12 +556,10 @@ footer {
     color: #1E1E1E; }
 
 @media (min-width: 750px) {
-  .board .row {
-    display: flex;
-    align-items: flex-end; }
-
-  .pedal {
-    min-height: 20rem; } }
+  .board .flex-row {
+    -ms-align-items: flex-end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end; } }
 .nutmeg {
   color: #0064C8; }
 

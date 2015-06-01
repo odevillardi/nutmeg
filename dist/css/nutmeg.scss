@@ -141,9 +141,16 @@ a {
     -webkit-flex-wrap: wrap-reverse;
             flex-wrap: wrap-reverse;
   }
+  &:not(.row){
+    margin-bottom: 4rem;
+    .column, .columns { margin-bottom: 0; }
+  }
 
-  margin-bottom: 4rem;
-  .column, .columns { margin-bottom: 0; }
+  &::after{
+    content: "";
+    display: table;
+    clear: both; 
+  }
 }
 
 
@@ -313,6 +320,7 @@ header { height: 8rem; }
   .logo {
     position: absolute;
     height: 4rem;
+    width: 12rem;
     clip: rect(0px, 12rem, 4rem, 0px);
   }
 }
@@ -392,6 +400,7 @@ footer {
 
   .header .logo {
     height: 5rem;
+    width: 15rem;
     clip: rect(0px, 15rem, 5rem, 0px);
   }
 
@@ -586,12 +595,11 @@ footer {
 }
 
 @media (min-width: 750px) {
-  .board .row {
-    display: flex;
-    align-items: flex-end;
+  .board .flex-row {
+        -ms-align-items: flex-end;
+    -webkit-align-items: flex-end;
+            align-items: flex-end;
   }
-
-  .pedal { min-height: 20rem; }
 }
 
 .nutmeg  { color: $nutmeg-color; }

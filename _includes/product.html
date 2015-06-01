@@ -1,5 +1,5 @@
 <h2>{{ include.title }}</h2>
-<div class="row flex-row">
+<div class="flex-row">
   {% if include.image %}
     <div class="seven columns cover-container">
       <a{% if include.infoUrl %} href="{{ site.baseurl }}{{ include.infoUrl }}"{% else %} class="disabled"{% endif %}>

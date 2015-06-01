@@ -1,5 +1,5 @@
 ---
-title: "Contact · Nutmeg"
+title: "Projet personnalisé · Nutmeg"
 description: ""
 
 js:
@@ -14,7 +14,7 @@ twitterCard:        "summary"
 twitterCreator:     "@Nutmeg_fr"
 twitterTitle:       "Nutmeg"
 twitterImageUrl:    "http://nutmeg.fr/dist/images/favicon-nutmeg.png"
-twitterDescription: "Guitares et effets"
+twitterDescription: "Nutmeg fabrique la guitare de tes rêves !"
 twitterData1:
 twitterLabel1:
 twitterData2:
@@ -24,10 +24,22 @@ twitterLabel2:
 {% include head.html %}
   {% include header.html %}
 
-    <div class="container section nocrumbs last-section">
-      <h1>Contact</h1>
+    <div class="container section last-section">
+
+      <div class="breadcrumb" xmlns:v="http://rdf.data-vocabulary.org/#">
+        <span typeof="v:Breadcrumb">
+          <a href="{{ site.baseurl }}/" rel="v:url" property="v:title">Nutmeg</a>
+          <span rel="v:child" typeof="v:Breadcrumb">
+            <a href="{{ site.baseurl }}{{ site.data.guitares.LinkUrl }}" rel="v:url" property="v:title">{{ site.data.guitares.Titre }}</a>
+          </span>
+        </span>
+      </div>
+
+      <h1>Ton projet perso</h1>
       <p class="lead">
-        Pour nous contacter&nbsp;: remplis le formulaire, ou écris-nous sur Twitter <a href="//twitter.com/Nutmeg_fr">@Nutmeg_fr</a>.
+        Décris-nous ton projet, ton envie, ton rêve&nbsp;!
+        <br>N’oublie pas de nous préciser les matériaux dont tu disposes, ceux dont tu as besoin.
+        <br>On te répondra au plus vite pour te dire ce qu'on peut faire pour répondre au mieux à ta demande :)
       </p>
       <form class="formulaire" action="https://getsimpleform.com/messages?form_api_token=66472dc236aa9c01a6e561a249236e2d" method="post">
         <input type='hidden' name='redirect_to' value='http://127.0.0.1:4000/contact/merci.html'>
@@ -35,10 +47,7 @@ twitterLabel2:
         <input class="u-full-width" id="email" placeholder="ton_email@mailbox.com" name="email" type="email" required="required">
         <label for="objet">Objet</label>
         <select class="u-full-width" id="objet" name="objet" required="required">
-          <option></option>
-          <option value="Essayer une guitare">Essayer une guitare</option>
-          <option value="Question sur les effets">Question sur les effets</option>
-          <option value="Autre">Autre</option>
+          <option value="Projet personnalisé">Projet personnalisé</option>
         </select>
         <label for="message">Message</label>
         <textarea id="message" placeholder="Salut…" class="u-full-width" name="message" required="required"></textarea>

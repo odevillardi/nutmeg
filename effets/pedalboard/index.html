@@ -40,22 +40,16 @@ twitterLabel2:
         Effets activés : <button id="overallEffects" class="button button-primary off" onclick="switchEffet(this,'overall');">A</button>
       </p>
 
-    <div id="controls" class="board">
-      <div class="row">
-        {% include effet.html name="piggely" title="Piggely's screaming Octaver" effet="octaver" key="O" %}
-        {% include effet.html name="zelda"   title="Zelda's fun auto-Wha"        effet="wha"     key="W" %}
-        {% include effet.html name="tara"    title="Tara's sweet Compressor"     effet="comp"    key="C" %}
-        {% include effet.html name="nutmeg"  title="Nutmeg's dirty Drive"        effet="drive"   key="D" %}
-      </div>
-      <div class="row">
-        {% include effet.html name="shaolin" title="Shaolin's warm Chorus"  effet="chorus" key="H" %}
-        {% include effet.html name="pigasus" title="Pigasus' extreme Boost" effet="boost"  key="B" %}
-        {% include effet.html name="clover"  title="Clover's infinite Echo" effet="echo"   key="E" %}
-        {% include effet.html name="oliver"  title="Oliver's holly Reverb"  effet="reverb" key="R" %}
-      </div>
-<!--       <div class="row">
-        {% include effets/empty.html %}
-      </div> -->
+      <div id="controls" class="board">
+        {% for effect in site.data.effets.effects %}
+        {% capture mod %} {{ forloop.index | modulo:4 }} {% endcapture%}
+          {% if forloop.first or forloop.index == 5 %}<div class="row flex-row">{% endif %}
+           {% include effet.html name=effect.class title=effect.Title effet=effect.Effet key=effect.Key %}
+          {% if forloop.index == 4 or forloop.last %}</div>{% endif %}
+        {% endfor %}
+  <!--       <div class="row">
+          {% include effet-vide.html %}
+        </div> -->
       </div>
 
       <p class="lead">

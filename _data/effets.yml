@@ -15,38 +15,54 @@ effects:
 - class:        "piggely"
   Title:        "Piggely’s screaming octaver"
   Description:  "fais hurler ta guitare et pète les tympans de tes voisins."
+  Effet:        "octaver"
+  Key:          "O"
 
 ### Zelda's auto wha ###
 - class:        "zelda"
   Title:        "Zelda’s fun auto-wah"
   Description:  "chikiwah, chiki-chiki-chikiwah."
+  Effet:        "wha"
+  Key:          "W"
 
 ### Tara's compressor ###
 - class:        "tara"
   Title:        "Tara’s sweet compres&shy;sor"
   Description:  "you’ve got to pump it up."
+  Effet:        "comp"
+  Key:          "C"
 
 ### Nutmeg's stinky drive ###
 - class:        "nutmeg"
   Title:        "Nutmeg’s stinky drive"
   Description:	"une petite disto de derrière les fagots qui sent bon la campagne."
+  Effet:        "drive"
+  Key:          "D"
 
 ### Shaolin's warm chorus ###
 - class:        "shaolin"
   Title:        "Shaolin’s warm chorus"
   Description:  "ta guitare va ronronner comme un chaton qui fait la sieste au soleil."
+  Effet:        "chorus"
+  Key:          "H"
 
 ### Pigasus' extreme boost ###
 - class:        "pigasus"
   Title:        "Pigasus’ extreme boost"
   Description:  "BOOM, redonne le pouvoir à ton solo."
+  Effet:        "boost"
+  Key:          "B"
 
 ### Oliver's holly reverb ###
 - class:        "oliver"
   Title:        "Oliver’s holly reverb"
   Description:  "envie de sonner comme Queen à Wembley en 86&nbsp;? Hey, faut pas rêver non plus&nbsp;!"
+  Effet:        "reverb"
+  Key:          "R"
 
 ### Clover's infinite echo ###
 - class:        "clover"
   Title:        "Clover’s infinite echo"
   Description:	"dans l’espace, personne n'entendra votre echo. Sauf si vous vous appelez Clover."
+  Effet:        "echo"
+  Key:          "E"
