@@ -11,7 +11,7 @@ html {
 /* Typo */
 body {
   color: #1E1E1E;
-  font-family: "Lato", "Raleway", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Lato", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
   -webkit-font-variant-ligatures: common-ligatures;
