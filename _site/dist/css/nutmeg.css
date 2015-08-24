@@ -250,7 +250,7 @@ input[type="button"].button-primary {
   border-color: #3f0000; }
   .button.button-primary.off:hover, .button.button-primary.off:focus {
     color: #ffffff;
-    background-color: #d70000;
+    background-color: #d80000;
     border-color: darkred; }
 
 /* Form */
@@ -401,6 +401,7 @@ footer {
     height: 10rem;
     width: calc(50% - 480px);
     min-width: 10%;
+    max-width: 170px;
     padding-top: 5rem;
     margin: 0; }
 
@@ -418,6 +419,17 @@ footer {
     height: 13rem;
     margin-top: -15rem;
     padding: 2rem 0 0 0; } }
+@media (min-width: 1300px) {
+  .header,
+  .footer {
+    min-width: 0;
+    margin-left: calc(50% - 170px - 480px); }
+
+  .menu,
+  .thanks,
+  .close {
+    min-width: 0;
+    margin-right: calc(50% - 170px - 480px); } }
 /* Bazinga */
 .bazinga {
   background: #ffffff no-repeat center;
