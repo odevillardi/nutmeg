@@ -284,6 +284,7 @@ input[type="button"].button-primary {
 .formulaire {
   input, select, textarea {
     color: $main-color;
+    &:focus { border-color: gray; }
     &:valid { border-color: lightgreen; }
   }
 

@@ -256,6 +256,8 @@ input[type="button"].button-primary {
 /* Form */
 .formulaire input, .formulaire select, .formulaire textarea {
   color: #1E1E1E; }
+  .formulaire input:focus, .formulaire select:focus, .formulaire textarea:focus {
+    border-color: gray; }
   .formulaire input:valid, .formulaire select:valid, .formulaire textarea:valid {
     border-color: lightgreen; }
 .formulaire label {

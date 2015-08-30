@@ -28,7 +28,7 @@
     
     
     
-    <link rel="stylesheet" href="/dist/css/nutmeg.css">
+    <link href="/dist/css/nutmeg.css" rel='stylesheet' type='text/css'>
     
   </head>
 
@@ -58,7 +58,7 @@
         Pour nous contacter&nbsp;: remplis le formulaire, ou écris-nous sur Twitter <a href="//twitter.com/Nutmeg_fr">@Nutmeg_fr</a>.
       </p>
       <form class="formulaire" action="https://getsimpleform.com/messages?form_api_token=66472dc236aa9c01a6e561a249236e2d" method="post">
-        <input type='hidden' name='redirect_to' value='http://127.0.0.1:4000/contact/merci.html'>
+        <input type='hidden' name='redirect_to' value='http://nutmeg.fr/contact/merci.html'>
         <label for="email">Adresse email <small>(Pour te répondre. Uniquement.)</small></label>
         <input class="u-full-width" id="email" placeholder="ton_email@mailbox.com" name="email" type="email" required="required">
         <label for="objet">Objet</label>
@@ -103,19 +103,6 @@
          "url" : "http://nutmeg.fr/"
       }
     </script>
-    <script>
-      WebFontConfig = {
-        google: {
-          families: ['Ovo', 'Lato:300,700', 'PT+Mono']
-        },
-        timeout: 2000
-      };
-
-     (function(d) {
-        var wf = d.createElement('script'), s = d.scripts[0];
-        wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1.5.6/webfont.js';
-        s.parentNode.insertBefore(wf, s);
-     })(document);
-    </script>
+    <link href='https://fonts.googleapis.com/css?family=Ovo|Lato:300,700|PT+Mono' rel='stylesheet' type='text/css'>
   </body>
 </html>
