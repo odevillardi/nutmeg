@@ -71,7 +71,7 @@ h6 {
 a {
   color: #0064C8; }
   a img:not(.logo) {
-    padding: 0.3rem;
+    padding: 1px;
     border: 1px solid #B7B7B7; }
   a:hover, a:focus {
     color: #168aff;
