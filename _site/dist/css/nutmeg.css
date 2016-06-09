@@ -158,17 +158,17 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  font-family: "PT Mono", Courier, monospace;
   height: 4rem;
   padding: 0 1.5rem;
+  line-height: 3.8rem;
+  font-family: "PT Mono", Courier, monospace;
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 3.8rem;
   text-transform: none;
   font-variant: small-caps;
+  color: #007A4F;
   border-radius: 0;
   border-color: currentColor;
-  color: #007A4F;
   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15) inset; }
   .button:hover, .button:focus,
   button:hover,

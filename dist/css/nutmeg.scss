@@ -189,17 +189,17 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  font-family: $font-monospace;
   height: 4rem;
   padding: 0 1.5rem;
+  line-height: 3.8rem;
+  font-family: $font-monospace;
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 3.8rem;
   text-transform: none;
   font-variant: small-caps;
+  color: $second-link-color;
   border-radius: 0;
   border-color: currentColor;
-  color: $second-link-color;
   box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.15) inset;
 
   &:hover, &:focus {
