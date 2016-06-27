@@ -319,7 +319,7 @@ header {
     #menu:target .menu a:hover:not(.close), #menu:target .menu a:focus:not(.close) {
       text-decoration: underline; }
   #menu:target .menu a.active {
-    border-bottom: 2px solid currentColor; }
+    text-decoration: underline; }
 
 @media (max-width: 330px) {
   #menu:target .header .logo {

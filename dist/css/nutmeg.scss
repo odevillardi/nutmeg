@@ -361,7 +361,7 @@ header { height: 8rem; }
       &:not(.close) { text-decoration: underline; }
     }
 
-    &.active { border-bottom: 2px solid currentColor; }
+    &.active { text-decoration: underline; }
   }
 }
 
