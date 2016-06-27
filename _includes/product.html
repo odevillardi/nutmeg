@@ -17,13 +17,12 @@
   <div class="five columns text-center">
     <p class="lead">{{ include.description }}</p>
     {% if include.buyUrl %}
-      {% if include.infoUrl %}
-        <a class="button" href="{{ site.baseurl }}{{ include.infoUrl }}">{{ include.infoTitle }}</a>
-      {% endif %}
       {% if include.price %}
         <p>{{ include.price }}</p>
       {% endif %}
-        <a class="button button-primary u-full-width" href="{{ site.baseurl }}{{ include.buyUrl }}">{{ include.buyTitle }}</a>
+      {% if include.infoUrl %}
+        <a class="button button-primary u-full-width" href="{{ site.baseurl }}{{ include.infoUrl }}">{{ include.infoTitle }}</a>
+      {% endif %}
     {% else %}
       {% if include.price %}
         <p>{{ include.price }}</p>

@@ -28,7 +28,7 @@ series:
     Price:        "Seulement<br><strong class='lead'>299</strong>€"
     InfoTitle:    "Découvrir"
     InfoUrl:      "/guitares/skateboard/nut-one.html"
-    BuyTitle:     "Acheter"
+    BuyTitle:     "Essayer"
     BuyUrl:       "/contact/nut-one.html"
 
   ### Fred's skate ###
@@ -40,7 +40,7 @@ series:
     Price:        "Seulement<br><strong class='lead'>399</strong>€"
     InfoTitle:    "Découvrir"
     InfoUrl:      "/guitares/skateboard/fred-skate.html"
-    BuyTitle:     "Acheter"
+    BuyTitle:     "Essayer"
     BuyUrl:       "/contact/fred-skate.html"
 
   ### White spirit ###
