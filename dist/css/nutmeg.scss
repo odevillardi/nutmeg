@@ -149,7 +149,7 @@ a {
   &::after{
     content: "";
     display: table;
-    clear: both; 
+    clear: both;
   }
 }
 
@@ -163,7 +163,7 @@ a {
   .flex-row {
     p:last-child, .button:last-child { margin-bottom: 0; }
 
-    .cover-container { 
+    .cover-container {
       position: relative;
 
       .cover, .contain {
@@ -209,7 +209,7 @@ input[type="button"] {
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
   }
 
-  &:active { 
+  &:active {
     padding-top: 1px;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1) inset;
   }
@@ -339,7 +339,7 @@ header { height: 8rem; }
     right: 0;
     margin: 0.75rem 0 0 0;
   }
-  
+
   .close {
     position: absolute;
     top: 0;
@@ -534,7 +534,7 @@ footer {
 
   .guitares { background-image: url("{{ site.baseurl }}/dist/images/guitares/nutmeg-guitares-1500.jpg"); }
   .effets   { background-image: url("{{ site.baseurl }}/dist/images/effets/nutmeg-effets-1500.jpg"); }
-  
+
   @media (min-resolution: 200dpi) {
     .guitares { background-image: url("{{ site.baseurl }}/dist/images/guitares/nutmeg-guitares-2880.jpg"); }
     .effets   { background-image: url("{{ site.baseurl }}/dist/images/effets/nutmeg-effets-2880.jpg"); }
@@ -544,7 +544,7 @@ footer {
 /* Sections */
 .section {
   padding-top: 1.5rem;
-  border-top: 1px solid currentColor; 
+  border-top: 1px solid currentColor;
 }
 
 .breadcrumb {
@@ -554,7 +554,7 @@ footer {
   a {
     text-decoration: none;
     color: currentColor;
-    
+
     &::after {
       content: " ›";
       cursor: default;
@@ -572,7 +572,7 @@ footer {
   .section { border-top: none; }
   .section.nocrumbs { padding-top: 4.5rem; }
 
-  .last-section { 
+  .last-section {
     padding-bottom: 15rem;
     border-bottom: none;
   }
