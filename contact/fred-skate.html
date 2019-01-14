@@ -62,17 +62,17 @@ twitterLabel2:
       </div>
       <h2 id="formulaire">Formulaire</h2>
         <div class="row">
-        <form class="formulaire" action="https://getsimpleform.com/messages?form_api_token=66472dc236aa9c01a6e561a249236e2d" method="post">
-          <input type='hidden' name='redirect_to' value='http://nutmeg.fr/contact/merci.html'>
-          <label for="email">Adresse email <small>(Pour te répondre. Uniquement.)</small></label>
-          <input class="u-full-width" id="email" placeholder="ton_email@mailbox.com" name="email" type="email" required="required">
-          <label for="objet">Objet</label>
-          <select class="u-full-width" id="objet" name="objet" required="required">
-            <option value="Essayer la Nutmeg {{ site.data.guitares.series[0].Guitars[1].Title }}">Essayer la Nutmeg {{ site.data.guitares.series[0].Guitars[1].Title }}</option>
-          </select>
-          <label for="message">Message</label>
-          <textarea id="message" placeholder="Salut..." class="u-full-width" name="message" required="required"></textarea>
-          <button class="button button-primary u-full-width" type="submit">Envoyer</button>
+          <form action="https://formspree.io/&#104;&#101;l%6co&#64;&#110;%75&#116;&#109;&#101;g%2e%66%72" method="POST" />
+            <input type='hidden' name='redirect_to' value='http://nutmeg.fr/contact/merci.html'>
+            <label for="email">Adresse email <small>(Pour te répondre. Uniquement.)</small></label>
+            <input class="u-full-width" id="email" placeholder="ton_email@mailbox.com" name="email" type="email" required="required">
+            <label for="objet">Objet</label>
+            <select class="u-full-width" id="objet" name="objet" required="required">
+              <option value="Essayer la Nutmeg {{ site.data.guitares.series[0].Guitars[1].Title }}">Essayer la Nutmeg {{ site.data.guitares.series[0].Guitars[1].Title }}</option>
+            </select>
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Salut..." class="u-full-width" name="message" required="required"></textarea>
+            <button class="button button-primary u-full-width" type="submit">Envoyer</button>
         </form>
         <p class="mention">(Formulaire garanti sans SPAM et sans <acronym title="Organisme Génétiquement Modifié">OGM</acronym>)</p>
       </div>
