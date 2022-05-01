@@ -1,18 +1,5 @@
 <header id="menu">
   <div class="header">
-    <a href="{{ site.baseurl }}/">
-      <img class="logo" src="{{ site.baseurl }}/dist/images/nutmeg.svg" alt="Accueil">
-    </a>
+    <img class="logo" src="{{ site.baseurl }}/dist/images/nutmeg.svg" alt="Accueil">
   </div>
-  {% if page.menu %}
-    <div class="menu">
-      <a class="button black" href="#menu" title="Afficher le menu">Menu</a>
-      <ul class="inline-list">
-        <li><a href="{{ site.baseurl }}/guitares/"{% if page.activeGuitares %} class="active"{% endif %}>Guitares</a></li>
-        <li><a href="{{ site.baseurl }}/effets/"{% if page.activeEffets %} class="active"{% endif %}>Effets</a></li>
-        <li><a href="{{ site.baseurl }}/contact/"{% if page.activeContact %} class="active"{% endif %}>Contact</a></li>
-      </ul>
-      <a href="#" class="close lead" title="Fermer le menu">&times;</a>
-    </div>
-  {% endif %}
 </header>

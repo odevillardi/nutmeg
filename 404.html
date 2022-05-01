@@ -23,34 +23,7 @@ twitterData2:
 twitterLabel2:
 ---
 
+
 {% include head.html %}
-  {% include header.html %}
-
-    <div class="container nocrumbs section">
-      <h1>Page introuvable :)</h1>
-      <p>
-        Pas grand chose à se mettre sous la dent ici...
-      </p>
-      <p>
-        <iframe width="800" height="600" class="u-full-width" src="https://www.youtube.com/embed/NzlG28B-R8Y" allowfullscreen></iframe>
-      </p>
-    </div>
-
-    <div class="discover">
-      <div class="container">
-        <h4>Sinon, voici nos guitares et effets</h4>
-      </div>
-    </div>
-      
-    <div class="bazinga guitares last-bazinga">
-      <div class="container">
-        <div class="row">
-          {% include bazinga.html title=site.data.guitares.Titre image=site.data.guitares.Image description=site.data.guitares.Description linkTitle=site.data.guitares.LinkTitle linkUrl=site.data.guitares.LinkUrl offset="" titleLevel="3" %}
-          
-          {% include bazinga.html title=site.data.effets.Titre image=site.data.effets.Image description=site.data.effets.Description linkTitle=site.data.effets.LinkTitle linkUrl=site.data.effets.LinkUrl offset="" titleLevel="3" %}
-        </div>
-      </div>
-    </div>
-
-  {% include footer.html %}
+{% include header.html %}
 {% include foot.html %}
