@@ -1,8 +1,40 @@
 ---
 title: "Nutmeg · Guitares et effets"
 description: "Guitares artisanales fabriquées à partir de matériaux recyclés. Effets numériques open-source pour guitares électriques."
+
+js:
+noindex:
+
+menu: 1
+activeGuitares:
+activeEffets:
+activeContact:
+
+twitterCard:        "summary"
+twitterCreator:     "@Nutmeg_fr"
+twitterTitle:       "Nutmeg"
+twitterDescription: "Guitares artisanales fabriquées à partir de matériaux recyclés. Effets numériques open-source pour guitares électriques."
+twitterImageUrl:    "http://nutmeg.fr/dist/images/favicon-nutmeg.png"
+twitterData1:
+twitterLabel1:
+twitterData2:
+twitterLabel2:
 ---
 
 {% include head.html %}
-{% include header.html %}
+  {% include header.html %}
+
+    <div class="bazinga guitares first-bazinga">
+      <div class="container">
+        {% include bazinga.html title=site.data.guitares.Titre image=site.data.guitares.Image description=site.data.guitares.Description linkTitle=site.data.guitares.LinkTitle linkUrl=site.data.guitares.LinkUrl offset="" titleLevel="1" buttonPrimary="-primary" %}
+      </div>
+    </div>
+
+    <div class="bazinga effets last-bazinga">
+      <div class="container">
+        {% include bazinga.html title=site.data.effets.Titre image=site.data.effets.Image description=site.data.effets.Description linkTitle=site.data.effets.LinkTitle linkUrl=site.data.effets.LinkUrl offset="six" titleLevel="1" buttonPrimary="-primary" %}
+      </div>
+    </div>
+
+  {% include footer.html %}
 {% include foot.html %}

@@ -1,0 +1,93 @@
+---
+title: "Fred's skate · Guitare skateboard · Nutmeg"
+description: "Notre 2e guitare skateboard fabriquée à partir d'un vieux skate, d’un vieux manche et d'une vieille chaussure."
+
+js:
+noindex:
+
+menu: 1
+activeGuitares: 1
+activeEffets:
+activeContact:
+
+twitterCard:        "summary_large_image"
+twitterCreator:     "@Nutmeg_fr"
+twitterTitle:       "Fred's skate, la guitare skateboard par Nutmeg"
+twitterDescription: "Notre 2e guitare skateboard fabriquée à partir d'un vieux skate, d’un vieux manche et d'une vieille chaussure."
+twitterImageUrl:    "http://nutmeg.fr/dist/images/guitares/skateboard/fred-skate/fred-skate-1280.jpg"
+twitterData1:
+twitterLabel1:
+twitterData2:
+twitterLabel2:
+---
+
+{% include head.html title=page.title %}
+  {% include header.html menu=1 activeGuitares=1 %}
+
+    <div class="container section">
+
+      <div class="breadcrumb">
+        <span typeof="v:Breadcrumb">
+          <a href="{{ site.baseurl }}/" rel="v:url" property="v:title">Nutmeg</a>
+          <span rel="v:child" typeof="v:Breadcrumb">
+            <a href="{{ site.baseurl }}{{ site.data.guitares.LinkUrl }}" rel="v:url" property="v:title">{{ site.data.guitares.Titre }}</a>
+            <span rel="v:child" typeof="v:Breadcrumb">
+              <a href="{{ site.baseurl }}{{ site.data.guitares.series[0].InfoUrl }}" rel="v:url" property="v:title">{{ site.data.guitares.series[0].Title }}</a>
+            </span>
+          </span>
+        </span>
+      </div>
+
+{% capture BuyUrl %} {{ site.data.boutons.acheter.url }} {% endcapture%}
+{% capture BuyTitle %} {{ site.data.boutons.acheter.name }} {% endcapture%}
+
+      <a class="button button-primary first-button u-pull-right" href="{{ site.data.guitares.series[0].Guitars[1].BuyUrl }}">{{ site.data.guitares.series[0].Guitars[1].BuyTitle }}</a>
+      <h1>{{ site.data.guitares.series[0].Guitars[1].Title }}</h1>
+    </div>
+
+    <div class="row">
+      <img class="u-full-width"
+           alt="Photo de {{ site.data.guitares.series[0].Guitars[1].Title | strip_html }}"
+           srcset="{{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-2880.jpg 2880w,
+           {{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-2000.jpg 2000w,
+           {{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-1500.jpg 1500w,
+           {{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-1280.jpg 1280w,
+           {{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-750.jpg 750w,
+           {{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-640.jpg 640w"
+           sizes="100vw"
+           src="{{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[1].Image }}-640.jpg">
+    </div>
+
+    <div class="container last-section">
+      <div class="row">
+        <p class="lead">
+        {{ site.data.guitares.series[0].Guitars[1].Description | strip_html }}
+        <br>
+        {{ site.data.guitares.series[0].Guitars[1].AddDescription }}
+        </p>
+      </div>
+
+      <div class="row flex-row">
+        <div class="six columns">
+        <h2>Vintage et moderne</h2>
+          <p class="lead">
+            Le vieux skate de Fred date des années 80 mais on lui a mis un gros humbucker bien moderne dessus&nbsp;!
+            <br>L’association est parfaite, les réglages sont fins et les finitions soignées. Notre 2<sup>e</sup> prototype annonce la couleur&nbsp;: les guitares skateboard envoient du lourd.
+          </p>
+        </div>
+        <div class="six columns">
+          <h2>Essaie-la</h2>
+          <p class="lead">
+            Un manche, un micro, un potard&nbsp;: aucune hésitation, la simplicité est au rendez-vous.
+            <br>N’hésite pas à nous contacter pour l’essayer.
+          </p>
+          <p class="price text-center">
+            {{ site.data.guitares.series[0].Guitars[1].Price }}
+          </p>
+          <a class="button button-primary u-full-width" href="{{ site.data.guitares.series[0].Guitars[1].BuyUrl }}">{{ site.data.guitares.series[0].Guitars[1].BuyTitle }}</a>
+        </div>
+      </div>
+    </div>
+
+  {% include footer.html %}
+{% include foot.html %}

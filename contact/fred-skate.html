@@ -1,0 +1,82 @@
+---
+title: "Essayer · Nutmeg"
+description: ""
+
+js:
+noindex:
+
+menu: 1
+activeGuitares:
+activeEffets:
+activeContact: 1
+
+twitterCard:        "summary"
+twitterCreator:     "@Nutmeg_fr"
+twitterTitle:       "Nutmeg"
+twitterImageUrl:    "http://nutmeg.fr/dist/images/favicon-nutmeg.png"
+twitterDescription: "Guitares et effets"
+twitterData1:
+twitterLabel1:
+twitterData2:
+twitterLabel2:
+---
+
+{% include head.html %}
+  {% include header.html %}
+
+    <div class="container section last-section">
+
+      <div class="breadcrumb">
+        <span typeof="v:Breadcrumb">
+          <a href="{{ site.baseurl }}/" rel="v:url" property="v:title">Nutmeg</a>
+          <span rel="v:child" typeof="v:Breadcrumb">
+            <a href="{{ site.baseurl }}{{ site.data.guitares.LinkUrl }}" rel="v:url" property="v:title">{{ site.data.guitares.Titre }}</a>
+            <span rel="v:child" typeof="v:Breadcrumb">
+              <a href="{{ site.baseurl }}{{ site.data.guitares.series[0].InfoUrl }}" rel="v:url" property="v:title">{{ site.data.guitares.series[0].Title }}</a>
+              <span rel="v:child" typeof="v:Breadcrumb">
+                <a href="{{ site.baseurl }}{{ site.data.guitares.series[0].Guitars[0].InfoUrl }}" rel="v:url" property="v:title">{{ site.data.guitares.series[0].Guitars[1].Title }}</a>
+              </span>
+            </span>
+          </span>
+        </span>
+      </div>
+
+      <h1>Essayer {{ site.data.guitares.series[0].Guitars[1].Title }}</h1>
+      <div class="lead">
+        <p>
+          On s’est dit que t’aurais envie de faire un essai avant d’acheter la <a href="{{ site.data.guitares.series[0].Guitars[1].InfoUrl }}">Nutmeg {{ site.data.guitares.series[0].Guitars[1].Title }}</a>.
+        </p>
+        <p>
+         Pour faire un essai, contacte-nous&nbsp;:
+        </p>
+        <ul>
+          <li>via notre Twitter <a href="//twitter.com/Nutmeg_fr">@Nutmeg_fr</a>&nbsp;;</li>
+          <li>via le formulaire <a href="#formulaire">ci-dessous</a>&nbsp;;</li>
+        </ul>
+        <p>
+          et on organise ça.
+        </p>
+        <p>
+          À très vite&nbsp;!
+        </p>
+      </div>
+      <h2 id="formulaire">Formulaire</h2>
+        <div class="row">
+          <form action="https://formspree.io/&#104;&#101;l%6co&#64;&#110;%75&#116;&#109;&#101;g%2e%66%72" method="POST" />
+            <input type='hidden' name='redirect_to' value='http://nutmeg.fr/contact/merci.html'>
+            <label for="email">Adresse email <small>(Pour te répondre. Uniquement.)</small></label>
+            <input class="u-full-width" id="email" placeholder="ton_email@mailbox.com" name="email" type="email" required="required">
+            <label for="objet">Objet</label>
+            <select class="u-full-width" id="objet" name="objet" required="required">
+              <option value="Essayer la Nutmeg {{ site.data.guitares.series[0].Guitars[1].Title }}">Essayer la Nutmeg {{ site.data.guitares.series[0].Guitars[1].Title }}</option>
+            </select>
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Salut..." class="u-full-width" name="message" required="required"></textarea>
+            <button class="button button-primary u-full-width" type="submit">Envoyer</button>
+        </form>
+        <p class="mention">(Formulaire garanti sans SPAM et sans <acronym title="Organisme Génétiquement Modifié">OGM</acronym>)</p>
+      </div>
+    </div>
+
+  {% include footer.html %}
+{% include foot.html %}
